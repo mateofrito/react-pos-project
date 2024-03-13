@@ -1,0 +1,296 @@
+{
+    "AppliedMenus": ["MainMenu", "DriveThruMenu", "ShakeMenu","SteakburgerMenu","SpecialitiesMenu","ChiliMenu","SidesMenu","SandwichModifications"],
+    "MenuItems": {
+      "SingleStkFF": {
+        "id": "1",
+        "label1":"Single",
+        "label2":"w/FF",
+        "price":"2.69",
+        "checkDisplay":"Single Stk w/FF",
+        "kitchenDisplay":"Single Stk",
+        "dressingTableDisplay":"Single Stk/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 1, "gridRowStart": 1 },
+          "SteakburgerMenu": { "gridColumnStart": 1, "gridRowStart": 1 }
+        }
+      },
+      "SingleChsFF": {
+        "id": "2",
+        "label1":"Single Chs",
+        "label2":"w/FF",
+        "price":"3.29",
+        "checkDisplay":"Single Chs w/FF",
+        "kitchenDisplay":"Single Chs",
+        "dressingTableDisplay":"Single Chs/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 2, "gridRowStart": 1 },
+          "SteakburgerMenu": { "gridColumnStart": 2, "gridRowStart": 1 }
+        }
+      },
+      "SingleChsBacFF": {
+        "id": "Stk-3",
+        "label1":"Single Chs &",
+        "label2":"Bacon w/FF",
+        "price":"3.99",
+        "checkDisplay":"SINGLE CHS BAC w/FF",
+        "kitchenDisplay":"SINGLE CHS BAC",
+        "dressingTableDisplay":"SINGLE CHS BAC/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 3, "gridRowStart": 1 },
+          "SteakburgerMenu": { "gridColumnStart": 3, "gridRowStart": 1 }
+        }
+      },
+      "DblStkFF": {
+        "id": "Stk-4",
+        "label1":"Double",
+        "label2":"w/FF",
+        "price":"3.99",
+        "checkDisplay":"DOUBLE STK w/FF",
+        "kitchenDisplay":"DOUBLE STK",
+        "dressingTableDisplay":"DOUBLE STK",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 1, "gridRowStart": 2 },
+          "SteakburgerMenu": { "gridColumnStart": 1, "gridRowStart": 2 }
+        }
+      },
+      "Chocolate Milkshake": {
+        "id": "3",
+        "label1":"Chocolate",
+        "label2":"Milkshake",
+        "price":"2.99",
+        "checkDisplay":"Reg Choc Shk",
+        "kitchenDisplay":"Reg Choc Shk",
+        "dressingTableDisplay":"Reg Choc Shk",
+        "modifications": "shakeToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 1, "gridRowStart": 5 },
+          "ShakeMenu": { "gridColumnStart": 1, "gridRowStart": 1 }
+        }
+      },
+      "Strawberry Milkshake": {
+        "id": "4",
+        "label1":"Strawberry",
+        "label2":"Milkshake",
+        "price":"2.99",
+        "checkDisplay":"Reg Straw Shk",
+        "kitchenDisplay":"Reg Straw Shk",
+        "dressingTableDisplay":"Reg Choc Shk",
+        "modifications": "shakeToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 2, "gridRowStart": 5 },
+          "ShakeMenu": { "gridColumnStart": 2, "gridRowStart": 1 }
+        }
+      },
+      "Vanilla Milkshake": {
+        "id": "5",
+        "label1":"Vanilla",
+        "label2":"Milkshake",
+        "price":"2.99",
+        "checkDisplay":"Reg Van Shk",
+        "kitchenDisplay":"Reg Van Shk",
+        "dressingTableDisplay":"Reg Van Shk",
+        "modifications": "shakeToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 3, "gridRowStart": 5 },
+          "ShakeMenu": { "gridColumnStart": 3, "gridRowStart": 1 }
+        }
+      },
+      "Onion": {
+        "id": "6",
+        "label1":"Onion",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Onion",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Onion",
+        "modifications": "",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 1, "gridRowStart": 1 }
+          
+        }
+      },
+      "Tomato": {
+        "id": "7",
+        "label1":"Tomato",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Tomato",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Tomato",
+        "modifications": "",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 2, "gridRowStart": 1 }
+          
+        }
+      },
+      "Lettuce": {
+        "id": "8",
+        "label1":"Lettuce",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Lettuce",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Lettuce",
+        "modifications": "",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 3, "gridRowStart": 1 }
+          
+        }
+      },
+      "Pickle": {
+        "id": "9",
+        "label1":"Pickle",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Pickle",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Pickle",
+        "modifications": "",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 4, "gridRowStart": 1 }
+          
+        }
+      },
+      "Ketchup": {
+        "id": "10",
+        "label1":"Ketchup",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Ketchup",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Ketchup",
+        "modifications": "",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 5, "gridRowStart": 1 }
+          
+        }
+      },
+      "Mustard": {
+        "id": "11",
+        "label1":"Mustard",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Mustard",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Mustard",
+        "modifications": "",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 6, "gridRowStart": 1 }
+          
+        }
+      },
+      "ComboNumber1": {
+        "id": "Combo1",
+        "label1":"Combo #1",
+        "label2":"Double Cheese",
+        "price":"5.99",
+        "checkDisplay":"Combo #1 Dbl Chs",
+        "kitchenDisplay":"#1 Double Cheese",
+        "dressingTableDisplay":"combo #1 Dbl Chs/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "DriveThruMenu": { "gridColumnStart": 1, "gridRowStart": 1 }
+         
+        }
+      },
+      
+      "ComboNumber2": {
+        "id": "Combo2",
+        "label1":"Combo #2",
+        "label2":"Single Cheese",
+        "price":"4.99",
+        "checkDisplay":"Combo #2 Single Chs",
+        "kitchenDisplay":"#2 Single Cheese",
+        "dressingTableDisplay":"#2 Single Chs/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "DriveThruMenu": { "gridColumnStart": 2, "gridRowStart": 1 }
+         
+        }
+      },
+      "ComboNumber3": {
+        "id": "Combo3",
+        "label1":"Combo #3",
+        "label2":"Frisco Melt",
+        "price":"6.99",
+        "checkDisplay":"Combo #3 Frisco",
+        "kitchenDisplay":"#3 Frisco Melt",
+        "dressingTableDisplay":"#3 Frisco Melt/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "DriveThruMenu": { "gridColumnStart": 3, "gridRowStart": 1 }
+         
+        }
+      },
+      "ComboNumber4": {
+        "id": "Combo4",
+        "label1":"Combo #4",
+        "label2":"Bacon Chs Dbl",
+        "price":"5.99",
+        "checkDisplay":"Combo #4 Bacon Chs Dbl",
+        "kitchenDisplay":"#4 Bacon Chs Dbl",
+        "dressingTableDisplay":"#4 Bacon Chs Dbl/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+
+        "Menus": {
+          "DriveThruMenu": { "gridColumnStart": 1, "gridRowStart": 2 }
+         
+        }
+      }
+     
+    }
+  }

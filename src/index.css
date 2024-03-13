@@ -1,13 +1,484 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "DOSWin";
+  src: url("./fonts/DOSWin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DOS";
+  src: url("./fonts/DOS.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "win-95";
+  src: url("./fonts/w-95-sans-serif.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    "DOSWin" monospace;
+}
+
+.pos-button {
+  background-color: red; /* Light grey background */
+  color: white; /* Text color */
+  border-top: 2px solid #ffffff; /* Top and left borders are lighter, creating a raised effect */
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
+  border-right: 2px solid #808080;
+  padding: 5px 15px; /* Padding around the text */
+  font-family: "Tahoma" !important;
+  font-weight: bold;
+  /*Font similar to Windows 95 */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+  outline: none; /* Remove outline to stick to the vintage style */
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column; /* Stacks content vertically */
+  align-items: center;
+  text-align: center;
+  height: 80px;
+  width: 240px;
+  /* text-shadow: 0.5px 0px white, 1.5px 0px white;
+  color: transparent;
+  letter-spacing: 1px; */
+}
+
+.pos-button:active {
+  border-top: 2px solid #808080; /* Invert the border colors for clicked effect */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  padding-top: 6px; /* Adjust padding to make the button appear pressed */
+  padding-bottom: 4px;
+}
+
+.pos-button-wide {
+  background-color: goldenrod; /* Light grey background */
+  color: white; /* Text color */
+  border-top: 2px solid #ffffff; /* Top and left borders are lighter, creating a raised effect */
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
+  border-right: 2px solid #808080;
+  padding: 5px 15px; /* Padding around the text */
+  font-family: "Tahoma" !important;
+  font-weight: bold;
+  /*Font similar to Windows 95 */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+  outline: none; /* Remove outline to stick to the vintage style */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 720px;
+  grid-column: span 3;
+}
+
+.pos-button-wide:active {
+  border-top: 2px solid #808080; /* Invert the border colors for clicked effect */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  padding-top: 6px; /* Adjust padding to make the button appear pressed */
+  padding-bottom: 4px;
+}
+
+.pos-button-label {
+  width: 75%;
+}
+
+.pos-modifications-button {
+  background-color: red; /* Light grey background */
+  color: white; /* Text color */
+  border-top: 2px solid #ffffff; /* Top and left borders are lighter, creating a raised effect */
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
+  border-right: 2px solid #808080;
+  padding: 5px 15px; /* Padding around the text */
+  font-family: "Tahoma" !important;
+  font-weight: bold;
+  /*Font similar to Windows 95 */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+  outline: none; /* Remove outline to stick to the vintage style */
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column; /* Stacks content vertically */
+  align-items: center;
+  text-align: center;
+  height: 80px;
+  width: 120px;
+  /* text-shadow: 0.5px 0px white, 1.5px 0px white;
+  color: transparent;
+  letter-spacing: 1px; */
+}
+
+.pos-modifications-button:active {
+  border-top: 2px solid #808080; /* Invert the border colors for clicked effect */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  padding-top: 6px; /* Adjust padding to make the button appear pressed */
+  padding-bottom: 4px;
+}
+.menu-container {
+  background-color: black;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  width:100%
+}
+
+.menu-button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 240px); /* 3 columns, each 240px wide */
+  grid-auto-rows: 80px; /* Minimum height for rows, but allows expansion */
+  justify-content: center;
+  align-content: start; /* Align to the top if container is taller than content */
+  gap: 0; /* No space between buttons */
+  width: 100%; /* Adjust based on your preference */
+  min-height: 695px; /* Adjust based on your preference */
+  background-color: black;
+}
+
+.modifications-button-container {
+  display: grid;
+  grid-template-columns: repeat(6, 120px); /* 6 columns, each 120px wide */
+  grid-auto-rows: 80px; /* Minimum height for rows, but allows expansion */
+  justify-content: center;
+  align-content: start; /* Align to the top if container is taller than content */
+  gap: 0; /* No space between buttons */
+  width: 100%; /* Adjust based on your preference */
+  min-height: 800px; /* Adjust based on your preference */
+  background-color: black;
+}
+
+.menu-title {
+  font-family: "Tahoma" !important;
+  font-weight: bold;
+}
+
+.menu-nav-button {
+  background-color: lightgrey; /* Light grey background */
+  color: darkblue; /* Text color */
+  border-top: 2px solid #ffffff; /* Top and left borders are lighter, creating a raised effect */
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
+  border-right: 2px solid #808080;
+  padding: 5px 15px; /* Padding around the text */
+  font-family: "Tahoma" !important;
+  font-weight: bold;
+  /*Font similar to Windows 95 */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+  outline: none; /* Remove outline to stick to the vintage style */
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column; /* Stacks content vertically */
+  align-items: center;
+  text-align: center;
+  height: 60px;
+  width: 120px;
+  /* text-shadow: 0.5px 0px white, 1.5px 0px white;
+  color: transparent;
+  letter-spacing: 1px; */
+}
+
+.menu-nav-button:active {
+  border-top: 2px solid #808080; /* Invert the border colors for clicked effect */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  padding-top: 6px; /* Adjust padding to make the button appear pressed */
+  padding-bottom: 4px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px; 
+  background-color: lightgrey; /* Stack children vertically */
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row; /* Lay out children horizontally */
+  align-items: flex-start;
+  max-height: 800px;
+  /* Align children at the start of the flex container */
+}
+
+.menu-container {
+  /* Your menu container styles */
+  max-width: 800px;
+  border-top: 2px solid #ffffff; /* Top and left borders are lighter, creating a raised effect */
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
+  border-right: 2px solid #808080;
+  flex-grow: 1; /* Allows the menu container to take up the remaining space */
+}
+
+.menu-nav-buttons {
+  display: flex;
+  background-color: lightgrey;
+  flex-direction: column;
+  max-height: 800px;
+  min-height: 800px; /* Stacks the buttons vertically */
+  /* Adds some space between the menu container and the buttons */
+}
+
+
+
+.check-display-panel {
+  display: flex;
+  
+  font-weight: bold;
+  flex-direction: column;
+  background-color: lightskyblue; /* Light background for the guest check */
+  width: 400px;
+  height: 100%;
+  padding: 0px;
+  border-top: 5px solid lightgrey;
+  border-bottom: 5px solid lightgrey;
+  border-right: 5px solid lightgrey;
+  border-left: 5px solid lightgrey;
+  box-sizing: border-box;
+  min-height: 800px; /* Includes padding in the element's total width and height */
+}
+
+.check-contents {
+  flex-grow: 1;
+  overflow-y: auto; /* Allows scrolling if items exceed panel height */
+}
+
+.check-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* Adjust based on your preference */
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.check-item > div {
+  display: flex;
+  align-items: center;
+}
+
+.check-total {
+  padding-top: 10px;
+  border-top: 2px solid black; /* Adds a line above the total for separation */
+  text-align: right;
+  font-weight: bold;
+  font-size: 35px; 
+  background-color: white;
+}
+
+/* Style for the action buttons row */
+.action-buttons-row {
+  /* Style for the action buttons row */
+  display: flex;
+  background-color: lightgrey;
+  justify-content: right; /* Center buttons horizontally */
+  gap: 0px; /* Space between buttons */
+  margin-bottom: 0px; /* Space between the button row and the rest of the content */
+}
+
+.action-buttons-row button {
+  padding: 10px;
+  cursor: pointer;
+  /* Add more styles as needed */
+}
+
+.action-button {
+  background-color: lightgrey; /* Light grey background */
+  color: darkblue; /* Text color */
+  border-top: 2px solid #ffffff; /* Top and left borders are lighter, creating a raised effect */
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
+  border-right: 2px solid #808080;
+  padding: 5px 15px; /* Padding around the text */
+  font-family: "Tahoma" !important;
+  font-weight: bold;
+  /*Font similar to Windows 95 */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+  outline: none; /* Remove outline to stick to the vintage style */
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column; /* Stacks content vertically */
+  align-items: center;
+  text-align: center;
+  height: 60px;
+  width: 120px;
+  /* text-shadow: 0.5px 0px white, 1.5px 0px white;
+  color: transparent;
+  letter-spacing: 1px; */
+}
+
+.action-button:active {
+  border-top: 2px solid #808080; /* Invert the border colors for clicked effect */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  padding-top: 6px; /* Adjust padding to make the button appear pressed */
+  padding-bottom: 4px;
+}
+
+.action-button-send {
+  background-color: green; /* Light grey background */
+  color: white; /* Text color */
+  border-top: 2px solid #ffffff; /* Top and left borders are lighter, creating a raised effect */
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
+  border-right: 2px solid #808080;
+  padding: 5px 15px; /* Padding around the text */
+  font-family: "Tahoma" !important;
+  font-weight: bold;
+  /*Font similar to Windows 95 */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+  outline: none; /* Remove outline to stick to the vintage style */
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column; /* Stacks content vertically */
+  align-items: center;
+  text-align: center;
+  height: 60px;
+  width: 120px;
+  /* text-shadow: 0.5px 0px white, 1.5px 0px white;
+  color: transparent;
+  letter-spacing: 1px; */
+}
+
+.action-button-send:active {
+  border-top: 2px solid #808080; /* Invert the border colors for clicked effect */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  padding-top: 6px; /* Adjust padding to make the button appear pressed */
+  padding-bottom: 4px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+}
+
+.login-content {
+  display: flex;
+  justify-content: space-between; /* Adjusts the space between the two containers */
+  width: 100%; /* Ensures the container spans the full width */
+}
+
+.login-image-container, .keypad-container {
+  flex: 1; /* Allows both divs to share the available space equally */
+  /* Add padding, margins, or specific widths if necessary */
+}
+
+.login-input {
+  font-size: 16px;
+  font-family: "Tahoma" !important;
+  color: darkblue;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-top: 2px solid #808080; /* Invert the border colors for clicked effect */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  background-color: white;
+  width: 360px;
+  height: 24px;
+  /* Further style the input field as needed */
+}
+
+.message {
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-top: 2px solid #808080; /* Invert the border colors for clicked effect */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  background-color: white;
+  width: 100%;
+  height: 24px;
+  font-family: "Tahoma" !important;
+  color: darkblue;
+  text-align: center;
+  font-weight: bold;
+  /* Further style the input field as needed */
+}
+
+.keypad-container{
+  background-color: darkred;
+  max-width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.login-image-container{
+  background-color: darkred;
+  max-width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 buttons wide */
+  gap: 0px; /* Space between buttons */
+}
+
+.keypad-button {
+  background-color: black; /* Light grey background */
+  color: white; /* Text color */
+  border-top: 5px solid darkgray;
+  font-weight: bold;
+  /*Font similar to Windows 95 */
+  font-size: 32px; /* Font size */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+  outline: none; /* Remove outline to stick to the vintage style */
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column; /* Stacks content vertically */
+  align-items: center;
+  text-align: center;
+  height: 60px;
+  width: 120px;
+  /* Additional button styling as needed */
+}
+
+.keypad-button:active {
+  border-top: 2px solid #808080; /* Invert the border colors for clicked effect */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  padding-top: 6px; /* Adjust padding to make the button appear pressed */
+  padding-bottom: 4px;
 }
