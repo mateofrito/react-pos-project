@@ -65,6 +65,9 @@ function MenuContainer({ activeMenu, addToCheck, completeMods }) {
 
   return (
     <div className="menu-container">
+       <div className="message-menu">
+        Error getting timed message
+      </div>
       <MenuHeader activeMenu={activeMenu} />
       {renderAlaCarteButton}
       <div className={menuGridClassName}>

@@ -379,12 +379,15 @@ code {
   align-items: center;
   padding: 20px;
   background-color: black;
+  height:800px;
 }
 
 .login-content {
   display: flex;
   justify-content: space-between; /* Adjusts the space between the two containers */
-  width: 100%; /* Ensures the container spans the full width */
+  width: 100%; 
+  height:800px;
+  padding-top:100px;
 }
 
 .login-image-container, .keypad-container {
@@ -403,7 +406,7 @@ code {
   border-bottom: 2px solid #ffffff;
   border-right: 2px solid #ffffff;
   background-color: white;
-  width: 360px;
+  width: 415px;
   height: 24px;
   /* Further style the input field as needed */
 }
@@ -427,10 +430,27 @@ code {
   /* Further style the input field as needed */
 }
 
+.message-menu {
+  font-size: 16px;
+  
+  border-top: 2px solid #808080; /* Invert the border colors for clicked effect */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  background-color: white;
+  width: 100%;
+  height: 24px;
+  font-family: "Tahoma" !important;
+  color: darkblue;
+  text-align: center;
+  font-weight: bold;
+  /* Further style the input field as needed */
+}
+
 .keypad-container{
   background-color: darkred;
-  max-width: 400px;
-  height: 300px;
+  max-width: 450px;
+  height: 375px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -440,8 +460,8 @@ code {
 
 .login-image-container{
   background-color: darkred;
-  max-width: 400px;
-  height: 300px;
+  max-width: 450px;
+  height: 375px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -458,10 +478,10 @@ code {
 .keypad-button {
   background-color: black; /* Light grey background */
   color: white; /* Text color */
-  border-top: 5px solid darkgray;
+  border-top: 7px solid #4f5059;
   font-weight: bold;
   /*Font similar to Windows 95 */
-  font-size: 32px; /* Font size */
+  font-size: 48px; /* Font size */
   cursor: pointer; /* Cursor to pointer to indicate it's clickable */
   outline: none; /* Remove outline to stick to the vintage style */
   display: inline-flex;
@@ -469,8 +489,8 @@ code {
   flex-direction: column; /* Stacks content vertically */
   align-items: center;
   text-align: center;
-  height: 60px;
-  width: 120px;
+  height: 80px;
+  width: 140px;
   /* Additional button styling as needed */
 }
 
@@ -481,4 +501,49 @@ code {
   border-right: 2px solid #ffffff;
   padding-top: 6px; /* Adjust padding to make the button appear pressed */
   padding-bottom: 4px;
+}
+
+.clear-button {
+  background-color: #bf1932;
+  border-top: 7px solid #ed7979;
+  color: white;
+  font-size: 36px; /* Adjust text color as needed */
+}
+
+
+
+.enter-button {
+  background-color: green;
+  color: white; 
+  border-top: 7px solid #8bc79b;
+  font-size: 36px;/* Adjust text color as needed */
+}
+
+.pos-footer{
+  width: 100%;
+  background-color: lightgrey; /* Light grey background */
+  color: darkred; /* Text color */
+  border-top: 2px solid #ffffff; /* Top and left borders are lighter, creating a raised effect */
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
+  border-right: 2px solid #808080;
+  height: 60px;
+  font-family: "Courier New"!important;
+  display: flex;
+  justify-content: space-between; /* Distributes children with space between */
+  align-items: flex-end; /* Aligns children to the bottom */
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.current-time{
+  padding-top: 25px;
+}
+
+.current-date{
+  padding-right: 50px;
+}
+
+.register-name{
+  padding-right: 300px;
 }

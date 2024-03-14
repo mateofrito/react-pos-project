@@ -53,6 +53,7 @@ function PosOrderEntry({onLogout}){
   
         <div className="main-content">
           <GuestCheck checkItems={checkItems} total={total} />
+         
           <MenuContainer
             activeMenu={activeMenu}
             addToCheck={addToCheck}

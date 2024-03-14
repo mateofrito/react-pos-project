@@ -1,13 +1,24 @@
 // Login.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 
 function Login({ onLoginSuccess }) {
   const [stage, setStage] = useState("username"); // 'username' or 'password'
   const [input, setInput] = useState("");
   const [username, setUsername] = useState("");
   const [maskedInput, setMaskedInput] = useState("");
-  const correctUsername = "1234";
-  const correctPassword = "5678";
+  const [currentTime, setCurrentTime] = useState('');
+  const [currentDate, setCurrentDate] = useState('');
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const now = new Date();
+      setCurrentTime(now.toLocaleTimeString());
+      setCurrentDate(now.toLocaleDateString());
+    }, 1000); // Update every second
+
+    return () => clearInterval(intervalId); // Clean up the interval on unmount
+  }, []);
 
   const validCredentials = [
     { username: "1", password: "1" },
@@ -77,9 +88,9 @@ function Login({ onLoginSuccess }) {
 
   return (
     <div className="login-container">
-        <div className="message">
-          {stage === "username" ? "Enter Employee ID" : "Enter Password"}
-        </div>
+      <div className="message">
+        {stage === "username" ? "Enter Employee ID" : "Enter Password"}
+      </div>
       <div className="login-content">
         <div className="login-image-container"></div>
         <div className="keypad-container">
@@ -88,7 +99,13 @@ function Login({ onLoginSuccess }) {
             {buttons.map((btn, index) => (
               <button
                 key={index}
-                className="keypad-button"
+                className={`keypad-button ${
+                  btn.label === "Clear"
+                    ? "clear-button"
+                    : btn.label === "Enter"
+                    ? "enter-button"
+                    : ""
+                }`}
                 onClick={btn.action}
               >
                 {btn.label}
@@ -96,6 +113,12 @@ function Login({ onLoginSuccess }) {
             ))}
           </div>
         </div>
+      </div>
+      <div className="pos-footer">
+      <div className="current-time">{currentTime}</div>
+      <div className="current-date">{currentDate}</div>
+      <div className="register-name">REG 1</div>
+      <div className="copyright-info">Copyright (C) Matt Fry 2024</div>
       </div>
     </div>
   );

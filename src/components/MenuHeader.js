@@ -3,7 +3,7 @@ import React from "react";
 function MenuHeader({ activeMenu }) {
     const menuHeaders = {
       MainMenu: "Main Menu",
-      DriveThruMenu: "Drive-Thru Menu",
+      DriveThruMenu: "Specials/Promo Menu",
       ShakeMenu: "Shake Menu",
       SteakburgerMenu: "Steakburgers",
       ChiliMenu: "Chili Menu",
