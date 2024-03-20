@@ -287,6 +287,11 @@ code {
   background-color: white;
 }
 
+.check-item.selected {
+  background-color: #e0e0e0; /* Or any other color to highlight the item */
+}
+
+
 /* Style for the action buttons row */
 .action-buttons-row {
   /* Style for the action buttons row */

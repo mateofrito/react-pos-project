@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import MenuNavButtons from "./MenuNavButtons";
 import GuestCheck from "./GuestCheck";
 import TopNavFunctionButtons from "./TopNavFunctionButtons";
@@ -13,38 +14,31 @@ function PosOrderEntry({ onLogout }) {
   const [isAlaCarteSelected, setIsAlaCarteSelected] = useState(false);
   const [selectedItemIndex, setSelectedItemIndex] = useState(null);
   const [currentModifications, setCurrentModifications] = useState([]);
-  const [activeItemIndex, setActiveItemIndex] = useState(null);
+  const [activeItemIndex, setActiveItemIndex] = useState(null); 
   var menuPrice = "";
+ 
 
   const handleAlaCarteClick = () => {
     setIsAlaCarteSelected(true);
     console.log("ala carte clicked.");
   };
- 
+
   const addToCheck = (item) => {
     if (isAlaCarteSelected && item.alaCarteEligible) {
       menuPrice = parseFloat(item.price) - parseFloat(item.alaCarteDiscount);
       addOrderItem({
         ...item,
-        modifications: [],
         checkDisplay: item.alaCarteDisplay,
         price: menuPrice.toFixed(2),
       });
     } else {
-      addOrderItem({
-        ...item,
-        modifications: [],
-        checkDisplay: item.checkDisplay,
-        price: item.price,
-      });
+      addOrderItem(item);
     }
     if (menuPrice) {
       // Check if price exists and is not an empty string
       setTotal((prevTotal) => prevTotal + parseFloat(menuPrice || 0));
     }
     if (item.modifications === "dtToppings") {
-      const newItemIndex = checkItems.length; // Assuming the item is added to the end
-      setActiveItemIndex(newItemIndex);
       setActiveMenu("SandwichModifications");
     } else {
       setActiveMenu(activeMenu);
@@ -56,29 +50,12 @@ function PosOrderEntry({ onLogout }) {
     setCheckItems((prevItems) => [...prevItems, item]);
   };
 
-  const completeMods = () => {
-    console.log(activeItemIndex);
-    if (activeItemIndex !== null) {
-      setCheckItems((prevItems) =>
-        prevItems.map((item, index) =>
-          index === activeItemIndex
-            ? { ...item, modifications: currentModifications }
-            : item
-        )
-      );
-      setCurrentModifications([]); // Reset for next item
-      setActiveItemIndex(null); // Reset active item index
-    }
-    setActiveMenu("MainMenu"); // Only here should we return to the MainMenu
-  };
-
   const sendOrder = () => {
-    // Filter checkItems to include only those items where isModifier is false
-    const itemsToIncludeInOrder = checkItems.filter((item) => !item.isModifier);
+    // Create a new order object
     const newOrder = {
       orderNumber: nextOrderNumber,
-      items: itemsToIncludeInOrder,
-      total: total, // Consider recalculating total if necessary
+      items: [...checkItems],
+      total: total,
     };
 
     console.log("Order sent:", newOrder);
@@ -88,51 +65,44 @@ function PosOrderEntry({ onLogout }) {
     setNextOrderNumber((prevOrderNumber) => prevOrderNumber + 1); // Increment order number
   };
 
-  const addModification = (modification) => {
-    setCurrentModifications((prev) => [...prev, modification]);
+  const completeMods = () => {
+    setActiveMenu("MainMenu");
   };
+
+  
 
   const onItemSelected = (index) => {
     setSelectedItemIndex(index);
   };
 
+ 
+
   const handleDuplicateItem = () => {
     if (selectedItemIndex !== null) {
-      setCheckItems((currentItems) => {
+      setCheckItems(currentItems => {
         const itemToDuplicate = { ...currentItems[selectedItemIndex] };
-        // Ensure a deep clone if modifications are complex
-        menuPrice = itemToDuplicate.price;
-        const newItems = [...currentItems, itemToDuplicate];
-        console.log(menuPrice);
-        setTotal((prevTotal) => prevTotal + parseFloat(menuPrice || 0));
-        setSelectedItemIndex(null); // Optionally reset selection
+        const newItems = [...currentItems, itemToDuplicate]; // Add duplicated item
         return newItems;
       });
+      // Update total to include duplicated item's price
+      setTotal(prevTotal => prevTotal + parseFloat(checkItems[selectedItemIndex].price));
+      // Optionally deselect item after duplication
+      setSelectedItemIndex(null);
     }
   };
 
   return (
-    <div className="pos-container">
-      <TopNavFunctionButtons
-        sendOrder={sendOrder}
-        onLogout={onLogout}
-        onDuplicate={handleDuplicateItem}
-      />
+    <div class="pos-container">
+      <TopNavFunctionButtons sendOrder={sendOrder} onLogout={onLogout} onDuplicate={handleDuplicateItem} />
 
       <div className="main-content">
-        <GuestCheck
-          checkItems={checkItems}
-          total={total}
-          onItemSelected={onItemSelected}
-          selectedItemIndex={selectedItemIndex}
-        />
+        <GuestCheck checkItems={checkItems} total={total} onItemSelected={onItemSelected} selectedItemIndex={selectedItemIndex}  />
 
         <MenuContainer
           activeMenu={activeMenu}
           addToCheck={addToCheck}
           completeMods={completeMods}
           handleAlaCarteClick={handleAlaCarteClick}
-          addModification={addModification}
         />
 
         <MenuNavButtons setActiveMenu={setActiveMenu} />

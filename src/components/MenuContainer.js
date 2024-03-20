@@ -1,10 +1,10 @@
 import React from "react";
-import menuSettings from "../Data/menudata.json";
+import menuSettings from "../data/menudata.json";
 import MenuHeader from "./MenuHeader";
 import AlaCarteButton from "./AlaCarteButton";
 import ButtonRegular from "./ButtonRegular";
 
-function MenuContainer({ activeMenu, addToCheck, completeMods }) {
+function MenuContainer({ activeMenu, addToCheck, completeMods, handleAlaCarteClick, addModification }) {
 //   const handleButtonClick = (item) => {
 //     console.log(`Clicked on: ${item.checkDisplay}`);
 //     // Placeholder for future implementation
@@ -12,7 +12,7 @@ function MenuContainer({ activeMenu, addToCheck, completeMods }) {
 
   const renderAlaCarteButton =
     activeMenu === "MainMenu" || activeMenu === "SteakburgerMenu" ? (
-      <AlaCarteButton activeMenu={activeMenu} />
+      <AlaCarteButton activeMenu={activeMenu} onClick={() => handleAlaCarteClick()} />
     ) : null;
 
   const renderDoneButton =
@@ -44,8 +44,9 @@ function MenuContainer({ activeMenu, addToCheck, completeMods }) {
     .map(([itemName, itemDetails]) => {
       const { label1, label2, buttonColor, textColor, id } = itemDetails;
       const position = itemDetails.Menus[activeMenu]; // Extract positioning for the current menu
-
+      
       return (
+        
         <ButtonRegular
           key={id}
           label1={label1}
@@ -58,10 +59,21 @@ function MenuContainer({ activeMenu, addToCheck, completeMods }) {
             // Additional styles here
           }}
           activeMenu={activeMenu}
-          onClick={() => addToCheck(itemDetails)}
-        />
-      );
+          onClick={() => {
+            // Here's the conditional behavior based on the menu
+            if (activeMenu === "SandwichModifications") {
+              // Assuming itemDetails or another identifier is used for modifications
+              addModification(itemDetails.checkDisplay); 
+              addToCheck(itemDetails)
+            } else {
+              addToCheck(itemDetails);
+            }
+          }}
+        /> 
+      ); 
     });
+
+   
 
   return (
     <div className="menu-container">

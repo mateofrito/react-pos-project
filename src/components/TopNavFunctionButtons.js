@@ -1,6 +1,6 @@
 import React from "react";
 
-function TopNavFunctionButtons({ sendOrder, onLogout }) {
+function TopNavFunctionButtons({ sendOrder, onLogout, onDuplicate }) {
   return (
     <div className="action-buttons-row">
       <button
@@ -26,12 +26,7 @@ function TopNavFunctionButtons({ sendOrder, onLogout }) {
       >
         POS Functions
       </button>
-      <button
-        className="action-button"
-        onClick={() => {
-          /* Action 1 */
-        }}
-      >
+      <button className="action-button" onClick={onDuplicate }>
         Dup
       </button>
       <button

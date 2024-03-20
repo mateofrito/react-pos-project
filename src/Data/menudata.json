@@ -12,6 +12,11 @@
         "modifications": "dtToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "Single Stk",
+        "isModifier": false,
+        "addASide": true,
 
         "Menus": {
           "MainMenu": { "gridColumnStart": 1, "gridRowStart": 1 },
@@ -29,6 +34,11 @@
         "modifications": "dtToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "Single Chs",
+        "addASide": true,
+        "isModifier": false,
 
         "Menus": {
           "MainMenu": { "gridColumnStart": 2, "gridRowStart": 1 },
@@ -46,6 +56,11 @@
         "modifications": "dtToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "Single Chs Bac",
+        "addASide": true,
+        "isModifier": false,
 
         "Menus": {
           "MainMenu": { "gridColumnStart": 3, "gridRowStart": 1 },
@@ -63,6 +78,11 @@
         "modifications": "dtToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "Double Stk",
+        "addASide": true,
+        "isModifier": false,
 
         "Menus": {
           "MainMenu": { "gridColumnStart": 1, "gridRowStart": 2 },
@@ -80,6 +100,9 @@
         "modifications": "shakeToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
 
         "Menus": {
           "MainMenu": { "gridColumnStart": 1, "gridRowStart": 5 },
@@ -97,6 +120,9 @@
         "modifications": "shakeToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
 
         "Menus": {
           "MainMenu": { "gridColumnStart": 2, "gridRowStart": 5 },
@@ -114,6 +140,9 @@
         "modifications": "shakeToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
 
         "Menus": {
           "MainMenu": { "gridColumnStart": 3, "gridRowStart": 5 },
@@ -131,6 +160,7 @@
         "modifications": "",
         "buttonColor":"red",
         "textColor":"white",
+        "isModifier": true,
 
         "Menus": {
           "SandwichModifications": { "gridColumnStart": 1, "gridRowStart": 1 }
@@ -148,6 +178,7 @@
         "modifications": "",
         "buttonColor":"red",
         "textColor":"white",
+        "isModifier": true,
 
         "Menus": {
           "SandwichModifications": { "gridColumnStart": 2, "gridRowStart": 1 }
@@ -165,6 +196,7 @@
         "modifications": "",
         "buttonColor":"red",
         "textColor":"white",
+        "isModifier": true,
 
         "Menus": {
           "SandwichModifications": { "gridColumnStart": 3, "gridRowStart": 1 }
@@ -182,6 +214,7 @@
         "modifications": "",
         "buttonColor":"red",
         "textColor":"white",
+        "isModifier": true,
 
         "Menus": {
           "SandwichModifications": { "gridColumnStart": 4, "gridRowStart": 1 }
@@ -199,6 +232,7 @@
         "modifications": "",
         "buttonColor":"red",
         "textColor":"white",
+        "isModifier": true,
 
         "Menus": {
           "SandwichModifications": { "gridColumnStart": 5, "gridRowStart": 1 }
@@ -216,6 +250,7 @@
         "modifications": "",
         "buttonColor":"red",
         "textColor":"white",
+        "isModifier": true,
 
         "Menus": {
           "SandwichModifications": { "gridColumnStart": 6, "gridRowStart": 1 }
@@ -233,6 +268,9 @@
         "modifications": "dtToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
 
         "Menus": {
           "DriveThruMenu": { "gridColumnStart": 1, "gridRowStart": 1 }
@@ -251,6 +289,9 @@
         "modifications": "dtToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
 
         "Menus": {
           "DriveThruMenu": { "gridColumnStart": 2, "gridRowStart": 1 }
@@ -268,6 +309,9 @@
         "modifications": "dtToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
 
         "Menus": {
           "DriveThruMenu": { "gridColumnStart": 3, "gridRowStart": 1 }
@@ -285,6 +329,9 @@
         "modifications": "dtToppings",
         "buttonColor":"red",
         "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
 
         "Menus": {
           "DriveThruMenu": { "gridColumnStart": 1, "gridRowStart": 2 }

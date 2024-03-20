@@ -88,9 +88,7 @@ function Login({ onLoginSuccess }) {
 
   return (
     <div className="login-container">
-      <div className="message">
-        {stage === "username" ? "Enter Employee ID" : "Enter Password"}
-      </div>
+       
       <div className="login-content">
         <div className="login-image-container"></div>
         <div className="keypad-container">
