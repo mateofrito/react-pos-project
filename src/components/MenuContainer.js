@@ -3,34 +3,63 @@ import menuSettings from "../data/menudata.json";
 import MenuHeader from "./MenuHeader";
 import AlaCarteButton from "./AlaCarteButton";
 import ButtonRegular from "./ButtonRegular";
+import DoneButton from "./DoneButton";
 
-function MenuContainer({ activeMenu, addToCheck, completeMods, handleAlaCarteClick, addModification }) {
-//   const handleButtonClick = (item) => {
-//     console.log(`Clicked on: ${item.checkDisplay}`);
-//     // Placeholder for future implementation
-//   };
+
+function MenuContainer({ activeMenu, addToCheck, completeSandwichMods, completeSandwichOrder, handleAlaCarteClick, addModification, handleSidePrompt }) {
 
   const renderAlaCarteButton =
     activeMenu === "MainMenu" || activeMenu === "SteakburgerMenu" ? (
       <AlaCarteButton activeMenu={activeMenu} onClick={() => handleAlaCarteClick()} />
     ) : null;
 
-  const renderDoneButton =
-    activeMenu === "SandwichModifications" ? (
+   
+    const renderSidePromptButtons =
+    activeMenu === "SidePrompt" ? (
+      <>
       <ButtonRegular
-        key="Done"
+        key="Done-sidePrompt"
         label1="Done"
         label2="" // Combining label1 and label2 for display""
         style={{
-          gridColumnStart: 5,
-          gridRowStart: 6,
+          gridColumnStart: 2,
+          gridRowStart: 3,
+          backgroundColor: "Red",
+          color: "white",
+          // Additional styles here
+        }}
+        activeMenu={activeMenu}
+        onClick={completeSandwichOrder }
+      />
+      <ButtonRegular
+        key="SubSide"
+        label1="Substitute"
+        label2="A Side" // Combining label1 and label2 for display""
+        style={{
+          gridColumnStart: 2,
+          gridRowStart: 4,
+          backgroundColor: "Blue",
+          color: "white",
+          // Additional styles here
+        }}
+        activeMenu={activeMenu}
+        onClick={() => handleSidePrompt()}
+      />
+      <ButtonRegular
+        key="addside-prompt"
+        label1="Add A"
+        label2="Side" // Combining label1 and label2 for display""
+        style={{
+          gridColumnStart: 2,
+          gridRowStart: 5,
           backgroundColor: "purple",
           color: "white",
           // Additional styles here
         }}
         activeMenu={activeMenu}
-        onClick={() => completeMods()}
+        onClick={() => handleSidePrompt()}
       />
+      </>
     ) : null;
 
   const menuGridClassName =
@@ -84,8 +113,12 @@ function MenuContainer({ activeMenu, addToCheck, completeMods, handleAlaCarteCli
       {renderAlaCarteButton}
       <div className={menuGridClassName}>
         {renderMenuItems}
-        {renderDoneButton}
+        <DoneButton activeMenu={activeMenu} completeSandwichMods={completeSandwichMods}/>
+        {/* {renderDoneButton} */}
+        {renderSidePromptButtons}
       </div>
+      
+      
     </div>
   );
 }

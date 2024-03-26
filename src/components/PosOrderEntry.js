@@ -56,7 +56,39 @@ function PosOrderEntry({ onLogout }) {
     setCheckItems((prevItems) => [...prevItems, item]);
   };
 
-  const completeMods = () => {
+  const completeSandwichMods = () => {
+    console.log(activeItemIndex);
+    if (activeItemIndex !== null) {
+      setCheckItems((prevItems) =>
+        prevItems.map((item, index) =>
+          index === activeItemIndex
+            ? { ...item, modifications: currentModifications }
+            : item
+        )
+      );
+      setCurrentModifications([]); // Reset for next item
+      setActiveItemIndex(null); // Reset active item index
+    }
+    setActiveMenu("SidePrompt"); // Only here should we return to the MainMenu
+  };
+
+  const handleSidePrompt = () => {
+    console.log(activeItemIndex);
+    if (activeItemIndex !== null) {
+      setCheckItems((prevItems) =>
+        prevItems.map((item, index) =>
+          index === activeItemIndex
+            ? { ...item, modifications: currentModifications }
+            : item
+        )
+      );
+      setCurrentModifications([]); // Reset for next item
+      setActiveItemIndex(null); // Reset active item index
+    }
+    setActiveMenu("AddSidesMenu"); // Only here should we return to the MainMenu
+  };
+
+  const completeSandwichOrder = () => {
     console.log(activeItemIndex);
     if (activeItemIndex !== null) {
       setCheckItems((prevItems) =>
@@ -71,7 +103,6 @@ function PosOrderEntry({ onLogout }) {
     }
     setActiveMenu("MainMenu"); // Only here should we return to the MainMenu
   };
-
   const sendOrder = () => {
     // Filter checkItems to include only those items where isModifier is false
     const itemsToIncludeInOrder = checkItems.filter((item) => !item.isModifier);
@@ -85,7 +116,8 @@ function PosOrderEntry({ onLogout }) {
     setOrders((prevOrders) => [...prevOrders, newOrder]);
     setCheckItems([]);
     setTotal(0);
-    setNextOrderNumber((prevOrderNumber) => prevOrderNumber + 1); // Increment order number
+    setNextOrderNumber((prevOrderNumber) => prevOrderNumber + 1);
+    onLogout(); // Increment order number
   };
 
   const addModification = (modification) => {
@@ -130,9 +162,11 @@ function PosOrderEntry({ onLogout }) {
         <MenuContainer
           activeMenu={activeMenu}
           addToCheck={addToCheck}
-          completeMods={completeMods}
+          completeSandwichMods={completeSandwichMods}
+          completeSandwichOrder={completeSandwichOrder}
           handleAlaCarteClick={handleAlaCarteClick}
           addModification={addModification}
+          handleSidePrompt={handleSidePrompt}
         />
 
         <MenuNavButtons setActiveMenu={setActiveMenu} />

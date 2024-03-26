@@ -257,6 +257,98 @@
           
         }
       },
+      "SideSalad": {
+        "id": "12",
+        "label1":"Side",
+        "label2":"Salad",
+        "price":"1.99",
+        "checkDisplay":"SIDE SALAD",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"SIDE SALAD",
+        "modifications": "saladModifications",
+        "buttonColor":"red",
+        "textColor":"white",
+        "isModifier": false,
+
+        "Menus": {
+          "SidesMenu": { "gridColumnStart": 1, "gridRowStart": 3 }
+          
+        }
+      },
+      "AddSideSalad": {
+        "id": "12-A",
+        "label1":"Side",
+        "label2":"Salad",
+        "price":"1.29",
+        "checkDisplay":"SIDE SALAD",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"SIDE SALAD",
+        "modifications": "saladModifications",
+        "buttonColor":"red",
+        "textColor":"white",
+        "isModifier": false,
+        "isSideAddition": true,
+
+        "Menus": {
+          "AddSidesMenu": { "gridColumnStart": 1, "gridRowStart": 3 }
+          
+        }
+      },
+      "OnionRings": {
+        "id": "13",
+        "label1":"Onion",
+        "label2":"Rings",
+        "price":"1.99",
+        "checkDisplay":"ONION RINGS",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"ONION RINGS",
+        "modifications": "",
+        "buttonColor":"red",
+        "textColor":"white",
+        "isModifier": false,
+
+        "Menus": {
+          "SidesMenu": { "gridColumnStart": 2, "gridRowStart": 3 }
+          
+        }
+      },
+      "AddOnionRings": {
+        "id": "13-A",
+        "label1":"Onion",
+        "label2":"Rings",
+        "price":"1.25",
+        "checkDisplay":"ONION RINGS",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"ONION RINGS",
+        "modifications": "",
+        "buttonColor":"red",
+        "textColor":"white",
+        "isModifier": false,
+        "isSideAddition": true,
+
+        "Menus": {
+          "AddSidesMenu": { "gridColumnStart": 2, "gridRowStart": 3 }
+          
+        }
+      },
+      "CottageCheese": {
+        "id": "14",
+        "label1":"Cottage",
+        "label2":"Cheese",
+        "price":"1.99",
+        "checkDisplay":"COTTAGE CHEESE",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"COTTAGE CHEESE",
+        "modifications": "",
+        "buttonColor":"red",
+        "textColor":"white",
+        "isModifier": false,
+
+        "Menus": {
+          "SidesMenu": { "gridColumnStart": 3, "gridRowStart": 3 }
+          
+        }
+      },
       "ComboNumber1": {
         "id": "Combo1",
         "label1":"Combo #1",
@@ -335,6 +427,46 @@
 
         "Menus": {
           "DriveThruMenu": { "gridColumnStart": 1, "gridRowStart": 2 }
+         
+        }
+      },
+      "Coke": {
+        "id": "drink-1",
+        "label1":"Coke",
+        "label2":"Classic",
+        "price":"1.99",
+        "checkDisplay":"COKE",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"",
+        "modifications": "drinkMods",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          "DrinkMenu": { "gridColumnStart": 1, "gridRowStart": 2 }
+         
+        }
+      },
+      "Sprite": {
+        "id": "drink-2",
+        "label1":"Sprite",
+        "label2":"",
+        "price":"1.99",
+        "checkDisplay":"SPRITE",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"",
+        "modifications": "drinkMods",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          "DrinkMenu": { "gridColumnStart": 2, "gridRowStart": 2 }
          
         }
       }

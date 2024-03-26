@@ -9,7 +9,8 @@ function MenuHeader({ activeMenu }) {
       ChiliMenu: "Chili Menu",
       SidesMenu: "Sides",
       SandwichModifications: "Toppings/Modifications",
-      // Add more menus as needed
+      AddASidesMenu: "Sides",
+      SidePrompt: "Add or Substitue a Side",
       default: "", // Default case
     };
     const headerValue = menuHeaders[activeMenu] || menuHeaders.default;
