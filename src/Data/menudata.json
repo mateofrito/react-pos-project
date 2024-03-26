@@ -89,6 +89,144 @@
           "SteakburgerMenu": { "gridColumnStart": 1, "gridRowStart": 2 }
         }
       },
+
+      "SnackPack": {
+        "id": "Stk-5",
+        "label1":"Snack",
+        "label2":"Pack",
+        "price":"2.99",
+        "checkDisplay":"SNACK PACK w/FF",
+        "kitchenDisplay":"SNACK PACK",
+        "dressingTableDisplay":"SNACK PACK",
+        "modifications": "dtToppings",
+        "buttonColor":"green",
+        "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "Double Stk",
+        "addASide": true,
+        "isModifier": false,
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 3, "gridRowStart": 7 },
+          "SteakburgerMenu": { "gridColumnStart": 1, "gridRowStart": 7 }
+        }
+      },
+
+      "DblChsFF": {
+        "id": "Stk-6",
+        "label1":"Double Chesse",
+        "label2":"w/FF",
+        "price":"3.99",
+        "checkDisplay":"DOUBLE CHS w/FF",
+        "kitchenDisplay":"DOUBLE CHS",
+        "dressingTableDisplay":"DOUBLE CHS",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "Double Chs",
+        "addASide": true,
+        "isModifier": false,
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 2, "gridRowStart": 2 },
+          "SteakburgerMenu": { "gridColumnStart": 2, "gridRowStart": 2 }
+        }
+      },
+
+      "DblChsBacFF": {
+        "id": "Stk-7",
+        "label1":"Double Chesse &",
+        "label2":"Bacon w/FF",
+        "price":"3.99",
+        "checkDisplay":"DOUBLE CHSBCN/FF",
+        "kitchenDisplay":"DOUBLE CHSBCN",
+        "dressingTableDisplay":"DOUBLE CHSBCN/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "Double Chsbcn",
+        "addASide": true,
+        "isModifier": false,
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 3, "gridRowStart": 2 },
+          "SteakburgerMenu": { "gridColumnStart": 3, "gridRowStart": 2 }
+        }
+      },
+
+      "TripleStkFF": {
+        "id": "Stk-8",
+        "label1":"Triple",
+        "label2":"w/FF",
+        "price":"3.99",
+        "checkDisplay":"TRIPLE STK/FF",
+        "kitchenDisplay":"TRIPLE STK",
+        "dressingTableDisplay":"TRIPLE STK/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "TRIPLE STK",
+        "addASide": true,
+        "isModifier": false,
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 1, "gridRowStart": 3 },
+          "SteakburgerMenu": { "gridColumnStart": 1, "gridRowStart": 3 }
+        }
+      },
+
+      "TripleChsFF": {
+        "id": "Stk-9",
+        "label1":"Triple",
+        "label2":"w/FF",
+        "price":"4.59",
+        "checkDisplay":"TRIPLE CHS/FF",
+        "kitchenDisplay":"TRIPLE CHS",
+        "dressingTableDisplay":"TRIPLE CHS/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "TRIPLE CHS",
+        "addASide": true,
+        "isModifier": false,
+
+        "Menus": {
+          "MainMenu": { "gridColumnStart": 2, "gridRowStart": 3 },
+          "SteakburgerMenu": { "gridColumnStart": 2, "gridRowStart": 3}
+        }
+      },
+
+      "FriscoFF": {
+        "id": "Stk-10",
+        "label1":"Frisco",
+        "label2":"Melt w/FF",
+        "price":"4.99",
+        "checkDisplay":"FRISCO MELT/FF",
+        "kitchenDisplay":"FRISCO MELT",
+        "dressingTableDisplay":"FRISCO MELT/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "FRISCO MELT",
+        "addASide": true,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "SteakburgerMenu": { "gridColumnStart": 1, "gridRowStart": 5}
+        }
+      },
       "Chocolate Milkshake": {
         "id": "3",
         "label1":"Chocolate",
@@ -105,7 +243,7 @@
         "isModifier": false,
 
         "Menus": {
-          "MainMenu": { "gridColumnStart": 1, "gridRowStart": 5 },
+          
           "ShakeMenu": { "gridColumnStart": 1, "gridRowStart": 1 }
         }
       },
@@ -125,7 +263,7 @@
         "isModifier": false,
 
         "Menus": {
-          "MainMenu": { "gridColumnStart": 2, "gridRowStart": 5 },
+          
           "ShakeMenu": { "gridColumnStart": 2, "gridRowStart": 1 }
         }
       },
@@ -145,7 +283,7 @@
         "isModifier": false,
 
         "Menus": {
-          "MainMenu": { "gridColumnStart": 3, "gridRowStart": 5 },
+          
           "ShakeMenu": { "gridColumnStart": 3, "gridRowStart": 1 }
         }
       },

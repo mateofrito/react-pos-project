@@ -3,6 +3,7 @@ import MenuNavButtons from "./MenuNavButtons";
 import GuestCheck from "./GuestCheck";
 import TopNavFunctionButtons from "./TopNavFunctionButtons";
 import MenuContainer from "./MenuContainer";
+import OrderSentModal from "./OrderSentModal";
 
 function PosOrderEntry({ onLogout }) {
   const [activeMenu, setActiveMenu] = useState("MainMenu");
@@ -14,6 +15,7 @@ function PosOrderEntry({ onLogout }) {
   const [selectedItemIndex, setSelectedItemIndex] = useState(null);
   const [currentModifications, setCurrentModifications] = useState([]);
   const [activeItemIndex, setActiveItemIndex] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   var menuPrice = "";
 
   const handleAlaCarteClick = () => {
@@ -112,13 +114,21 @@ function PosOrderEntry({ onLogout }) {
       total: total, // Consider recalculating total if necessary
     };
 
+    
+    setIsModalOpen(true); 
+ 
     console.log("Order sent:", newOrder);
     setOrders((prevOrders) => [...prevOrders, newOrder]);
     setCheckItems([]);
     setTotal(0);
     setNextOrderNumber((prevOrderNumber) => prevOrderNumber + 1);
-    onLogout(); // Increment order number
+    //onLogout(); // Increment order number
   };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    onLogout(); // Close the modal
+  }; 
 
   const addModification = (modification) => {
     setCurrentModifications((prev) => [...prev, modification]);
@@ -170,6 +180,7 @@ function PosOrderEntry({ onLogout }) {
         />
 
         <MenuNavButtons setActiveMenu={setActiveMenu} />
+        {isModalOpen && <OrderSentModal isOpen={isModalOpen} onClose={handleCloseModal} />}
       </div>
     </div>
   );

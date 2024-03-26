@@ -2,7 +2,9 @@ import React from "react";
 import menuSettings from "../data/menudata.json";
 import MenuHeader from "./MenuHeader";
 import AlaCarteButton from "./AlaCarteButton";
+import UpsellPrompts from "./UpsellPrompts";
 import ButtonRegular from "./ButtonRegular";
+import MainMenuShortcuts from "./MainMenuShortcuts";
 import DoneButton from "./DoneButton";
 
 
@@ -11,55 +13,6 @@ function MenuContainer({ activeMenu, addToCheck, completeSandwichMods, completeS
   const renderAlaCarteButton =
     activeMenu === "MainMenu" || activeMenu === "SteakburgerMenu" ? (
       <AlaCarteButton activeMenu={activeMenu} onClick={() => handleAlaCarteClick()} />
-    ) : null;
-
-   
-    const renderSidePromptButtons =
-    activeMenu === "SidePrompt" ? (
-      <>
-      <ButtonRegular
-        key="Done-sidePrompt"
-        label1="Done"
-        label2="" // Combining label1 and label2 for display""
-        style={{
-          gridColumnStart: 2,
-          gridRowStart: 3,
-          backgroundColor: "Red",
-          color: "white",
-          // Additional styles here
-        }}
-        activeMenu={activeMenu}
-        onClick={completeSandwichOrder }
-      />
-      <ButtonRegular
-        key="SubSide"
-        label1="Substitute"
-        label2="A Side" // Combining label1 and label2 for display""
-        style={{
-          gridColumnStart: 2,
-          gridRowStart: 4,
-          backgroundColor: "Blue",
-          color: "white",
-          // Additional styles here
-        }}
-        activeMenu={activeMenu}
-        onClick={() => handleSidePrompt()}
-      />
-      <ButtonRegular
-        key="addside-prompt"
-        label1="Add A"
-        label2="Side" // Combining label1 and label2 for display""
-        style={{
-          gridColumnStart: 2,
-          gridRowStart: 5,
-          backgroundColor: "purple",
-          color: "white",
-          // Additional styles here
-        }}
-        activeMenu={activeMenu}
-        onClick={() => handleSidePrompt()}
-      />
-      </>
     ) : null;
 
   const menuGridClassName =
@@ -115,7 +68,9 @@ function MenuContainer({ activeMenu, addToCheck, completeSandwichMods, completeS
         {renderMenuItems}
         <DoneButton activeMenu={activeMenu} completeSandwichMods={completeSandwichMods}/>
         {/* {renderDoneButton} */}
-        {renderSidePromptButtons}
+        {/* {renderSidePromptButtons} */}
+        <MainMenuShortcuts activeMenu={activeMenu} completeSandwichOrder={completeSandwichOrder} handleSidePrompt={handleSidePrompt}/>
+        <UpsellPrompts activeMenu={activeMenu} completeSandwichOrder={completeSandwichOrder} handleSidePrompt={handleSidePrompt}/>
       </div>
       
       

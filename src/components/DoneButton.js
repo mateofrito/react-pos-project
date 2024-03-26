@@ -12,7 +12,7 @@ const getStyle = (activeMenu) => {
         };
       case "AddSidesMenu":
         return {
-          gridColumnStart: 2,
+          gridColumnStart: 2 ,
           gridRowStart: 6,
           backgroundColor: "blue",
           color: "white",
