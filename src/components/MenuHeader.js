@@ -9,6 +9,7 @@ function MenuHeader({ activeMenu }) {
       ChiliMenu: "Chili Menu",
       SidesMenu: "Sides",
       SandwichModifications: "Toppings/Modifications",
+      Steakfranks: "Franks and Footlongs",
       AddASidesMenu: "Sides",
       SidePrompt: "Add or Substitue a Side",
       default: "", // Default case

@@ -1,6 +1,8 @@
 // Login.js
 import React, { useState, useEffect } from "react";
-
+import ConfirmationModal from "./ConfirmationModal";
+import snsSplash from "../images/POS-Splash.bmp";
+import passwordSplash from "../images/Password.bmp";
 
 function Login({ onLoginSuccess }) {
   const [stage, setStage] = useState("username"); // 'username' or 'password'
@@ -9,6 +11,8 @@ function Login({ onLoginSuccess }) {
   const [maskedInput, setMaskedInput] = useState("");
   const [currentTime, setCurrentTime] = useState('');
   const [currentDate, setCurrentDate] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -48,7 +52,8 @@ function Login({ onLoginSuccess }) {
       if (isValid) {
         onLoginSuccess();
       } else {
-        alert("Incorrect Username/Password");
+       
+        setIsModalOpen(true);
         setInput("");
         setMaskedInput("");
         setStage("username");
@@ -60,6 +65,11 @@ function Login({ onLoginSuccess }) {
   const handleClear = () => {
     setInput("");
     setMaskedInput("");
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    
   };
 
   const buttons = [
@@ -90,7 +100,9 @@ function Login({ onLoginSuccess }) {
     <div className="login-container">
        
       <div className="login-content">
-        <div className="login-image-container"></div>
+        <div className="login-image-container">
+          <img src={stage === "username" ? snsSplash : passwordSplash} alt="logo"/>
+        </div>
         <div className="keypad-container">
           <div className="login-input">{maskedInput}</div>
           <div className="keypad">
@@ -117,6 +129,8 @@ function Login({ onLoginSuccess }) {
       <div className="current-date">{currentDate}</div>
       <div className="register-name">REG 1</div>
       <div className="copyright-info">Copyright (C) Matt Fry 2024</div>
+      {isModalOpen && <ConfirmationModal isOpen={isModalOpen} onClose={handleCloseModal} modalText={"Invalid Username or Password"}/>}
+     
       </div>
     </div>
   );

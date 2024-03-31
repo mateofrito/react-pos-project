@@ -1,6 +1,6 @@
 import React from "react";
 
-function TopNavFunctionButtons({ sendOrder, onLogout, onDuplicate }) {
+function TopNavFunctionButtons({ sendOrder, onLogout, onDuplicate, canSendOrder }) {
   return (
     <div className="action-buttons-row">
       <button
@@ -78,7 +78,7 @@ function TopNavFunctionButtons({ sendOrder, onLogout, onDuplicate }) {
       >
         Print
       </button>
-      <button onClick={sendOrder} className="action-button-send">
+      <button onClick={sendOrder} disabled={!canSendOrder} className="action-button-send">
         Send Order
       </button>
     </div>

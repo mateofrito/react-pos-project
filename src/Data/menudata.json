@@ -227,6 +227,50 @@
           "SteakburgerMenu": { "gridColumnStart": 1, "gridRowStart": 5}
         }
       },
+      "StkFrankFF": {
+        "id": "Frk-1",
+        "label1":"Steak Frank",
+        "label2":"w/FF",
+        "price":"3.99",
+        "checkDisplay":"STK FRANK/FF",
+        "kitchenDisplay":"STK FRANK",
+        "dressingTableDisplay":"STK FRANK/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "STK FRANK",
+        "addASide": true,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "Steakfranks": { "gridColumnStart": 1, "gridRowStart": 1}
+        }
+      },
+      "FootLongFF": {
+        "id": "Frk-2",
+        "label1":"Footlong",
+        "label2":"w/FF",
+        "price":"3.99",
+        "checkDisplay":"FOOT LONG/FF",
+        "kitchenDisplay":"FOOT LONG",
+        "dressingTableDisplay":"FOOT LONG/FF",
+        "modifications": "dtToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": true,
+        "alaCarteDiscount": ".40",
+        "alaCarteDisplay": "FOOT LONG",
+        "addASide": true,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "Steakfranks": { "gridColumnStart": 2, "gridRowStart": 1}
+        }
+      },
       "Chocolate Milkshake": {
         "id": "3",
         "label1":"Chocolate",
@@ -285,6 +329,66 @@
         "Menus": {
           
           "ShakeMenu": { "gridColumnStart": 3, "gridRowStart": 1 }
+        }
+      },
+      "M&M Milkshake": {
+        "id": "Shake4",
+        "label1":"M&M",
+        "label2":"Milkshake",
+        "price":"3.29",
+        "checkDisplay":"REG M&M SHK",
+        "kitchenDisplay":"RREG M&M SHK",
+        "dressingTableDisplay":"REG M&M SHK",
+        "modifications": "shakeToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 1, "gridRowStart": 4 }
+        }
+      },
+      "PbCupMilkshake": {
+        "id": "Shake5",
+        "label1":"PB Cup",
+        "label2":"Milkshake",
+        "price":"3.29",
+        "checkDisplay":"REG PBCUP SHK",
+        "kitchenDisplay":"REG PBCUP SHK",
+        "dressingTableDisplay":"REG PBCUP SHK",
+        "modifications": "shakeToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 2, "gridRowStart": 4 }
+        }
+      },
+      "SnickersMilkshake": {
+        "id": "Shake6",
+        "label1":"Snickers",
+        "label2":"Milkshake",
+        "price":"3.29",
+        "checkDisplay":"REG SNICKERS SHK",
+        "kitchenDisplay":"REG SNICKERS SHK",
+        "dressingTableDisplay":"REG SNICKERS SHK",
+        "modifications": "shakeToppings",
+        "buttonColor":"red",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 3, "gridRowStart": 4 }
         }
       },
       "Onion": {

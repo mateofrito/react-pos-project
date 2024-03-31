@@ -3,108 +3,35 @@ import MenuNavButtons from "./MenuNavButtons";
 import GuestCheck from "./GuestCheck";
 import TopNavFunctionButtons from "./TopNavFunctionButtons";
 import MenuContainer from "./MenuContainer";
-import OrderSentModal from "./OrderSentModal";
+import ConfirmationModal from "./ConfirmationModal";
+import { useOrderManagement } from "../hooks/useOrderManagement";
 
 function PosOrderEntry({ onLogout }) {
-  const [activeMenu, setActiveMenu] = useState("MainMenu");
-  const [checkItems, setCheckItems] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [orders, setOrders] = useState([]); // Store all submitted orders
-  const [nextOrderNumber, setNextOrderNumber] = useState(1); // Start with order number 1
-  const [isAlaCarteSelected, setIsAlaCarteSelected] = useState(false);
-  const [selectedItemIndex, setSelectedItemIndex] = useState(null);
-  const [currentModifications, setCurrentModifications] = useState([]);
-  const [activeItemIndex, setActiveItemIndex] = useState(null);
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
-  var menuPrice = "";
-
-  const handleAlaCarteClick = () => {
-    setIsAlaCarteSelected(true);
-    console.log("ala carte clicked.");
-  };
- 
-  const addToCheck = (item) => {
-    if (isAlaCarteSelected && item.alaCarteEligible) {
-      menuPrice = parseFloat(item.price) - parseFloat(item.alaCarteDiscount);
-      addOrderItem({
-        ...item,
-        modifications: [],
-        checkDisplay: item.alaCarteDisplay,
-        price: menuPrice.toFixed(2),
-      });
-    } else {
-      addOrderItem({
-        ...item,
-        modifications: [],
-        checkDisplay: item.checkDisplay,
-        price: item.price,
-      });
-    }
-    if (menuPrice) {
-      // Check if price exists and is not an empty string
-      setTotal((prevTotal) => prevTotal + parseFloat(menuPrice || 0));
-    }
-    if (item.modifications === "dtToppings") {
-      const newItemIndex = checkItems.length; // Assuming the item is added to the end
-      setActiveItemIndex(newItemIndex);
-      setActiveMenu("SandwichModifications");
-    } else {
-      setActiveMenu(activeMenu);
-    }
-    setIsAlaCarteSelected(false);
-  };
-
-  const addOrderItem = (item) => {
-    setCheckItems((prevItems) => [...prevItems, item]);
-  };
-
-  const completeSandwichMods = () => {
-    console.log(activeItemIndex);
-    if (activeItemIndex !== null) {
-      setCheckItems((prevItems) =>
-        prevItems.map((item, index) =>
-          index === activeItemIndex
-            ? { ...item, modifications: currentModifications }
-            : item
-        )
-      );
-      setCurrentModifications([]); // Reset for next item
-      setActiveItemIndex(null); // Reset active item index
-    }
-    setActiveMenu("SidePrompt"); // Only here should we return to the MainMenu
-  };
-
-  const handleSidePrompt = () => {
-    console.log(activeItemIndex);
-    if (activeItemIndex !== null) {
-      setCheckItems((prevItems) =>
-        prevItems.map((item, index) =>
-          index === activeItemIndex
-            ? { ...item, modifications: currentModifications }
-            : item
-        )
-      );
-      setCurrentModifications([]); // Reset for next item
-      setActiveItemIndex(null); // Reset active item index
-    }
-    setActiveMenu("AddSidesMenu"); // Only here should we return to the MainMenu
-  };
-
-  const completeSandwichOrder = () => {
-    console.log(activeItemIndex);
-    if (activeItemIndex !== null) {
-      setCheckItems((prevItems) =>
-        prevItems.map((item, index) =>
-          index === activeItemIndex
-            ? { ...item, modifications: currentModifications }
-            : item
-        )
-      );
-      setCurrentModifications([]); // Reset for next item
-      setActiveItemIndex(null); // Reset active item index
-    }
-    setActiveMenu("MainMenu"); // Only here should we return to the MainMenu
-  };
+  const [sendOrderEnabled, setSendOrderEnabled] = useState(false);
+  const {
+    activeMenu,
+    setActiveMenu,
+    checkItems,
+    total,
+    setTotal,
+    addToCheck,
+    setCheckItems,
+    setOrders,
+    nextOrderNumber,
+    setNextOrderNumber,
+    selectedItemIndex,
+    completeSandwichMods,
+    completeSandwichOrder,
+    handleAlaCarteClick,
+    handleSidePrompt,
+    handleDuplicateItem,
+    addModification,
+    onItemSelected,
+    canSendOrder
+  } = useOrderManagement();
+  
   const sendOrder = () => {
     // Filter checkItems to include only those items where isModifier is false
     const itemsToIncludeInOrder = checkItems.filter((item) => !item.isModifier);
@@ -130,35 +57,14 @@ function PosOrderEntry({ onLogout }) {
     onLogout(); // Close the modal
   }; 
 
-  const addModification = (modification) => {
-    setCurrentModifications((prev) => [...prev, modification]);
-  };
-
-  const onItemSelected = (index) => {
-    setSelectedItemIndex(index);
-  };
-
-  const handleDuplicateItem = () => {
-    if (selectedItemIndex !== null) {
-      setCheckItems((currentItems) => {
-        const itemToDuplicate = { ...currentItems[selectedItemIndex] };
-        // Ensure a deep clone if modifications are complex
-        menuPrice = itemToDuplicate.price;
-        const newItems = [...currentItems, itemToDuplicate];
-        console.log(menuPrice);
-        setTotal((prevTotal) => prevTotal + parseFloat(menuPrice || 0));
-        setSelectedItemIndex(null); // Optionally reset selection
-        return newItems;
-      });
-    }
-  };
-
+ 
   return (
     <div className="pos-container">
       <TopNavFunctionButtons
         sendOrder={sendOrder}
         onLogout={onLogout}
         onDuplicate={handleDuplicateItem}
+        canSendOrder={canSendOrder}
       />
 
       <div className="main-content">
@@ -170,6 +76,7 @@ function PosOrderEntry({ onLogout }) {
         />
 
         <MenuContainer
+          setActiveMenu={setActiveMenu}
           activeMenu={activeMenu}
           addToCheck={addToCheck}
           completeSandwichMods={completeSandwichMods}
@@ -180,7 +87,7 @@ function PosOrderEntry({ onLogout }) {
         />
 
         <MenuNavButtons setActiveMenu={setActiveMenu} />
-        {isModalOpen && <OrderSentModal isOpen={isModalOpen} onClose={handleCloseModal} />}
+        {isModalOpen && <ConfirmationModal isOpen={isModalOpen} onClose={handleCloseModal} modalText={"Order Sent."}/>}
       </div>
     </div>
   );

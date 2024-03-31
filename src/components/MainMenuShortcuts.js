@@ -2,7 +2,7 @@ import React from 'react';
 import ButtonRegular from './ButtonRegular';
 
 
-const MainMenuShortcuts = ({ activeMenu, completeSandwichOrder, handleSidePrompt }) => {
+const MainMenuShortcuts = ({ setActiveMenu, activeMenu, completeSandwichOrder, handleSidePrompt }) => {
   if (activeMenu !== "MainMenu") return null;
 
   return (
@@ -18,9 +18,7 @@ const MainMenuShortcuts = ({ activeMenu, completeSandwichOrder, handleSidePrompt
           color: "Yellow",
           height: 100
         }}
-        onClick={() => {
-            /* Action 1 */
-          }}
+        onClick={() => setActiveMenu("Steakfranks")}
       />
       <ButtonRegular
         key="valueMeal"
