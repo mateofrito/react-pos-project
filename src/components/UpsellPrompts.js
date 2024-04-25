@@ -9,36 +9,24 @@ const UpsellPrompts = ({ activeMenu, completeSandwichOrder, handleSidePrompt }) 
     <>
       <ButtonRegular
         key="Done-sidePrompt"
-        label1="Done"
+        label1="With Fries Done"
         label2="" // Combining label1 and label2 for display""
         style={{
           gridColumnStart: 2,
           gridRowStart: 3,
-          backgroundColor: "Red",
+          backgroundColor: "#9f0000",
           color: "white",
         }}
         onClick={completeSandwichOrder}
       />
       <ButtonRegular
         key="SubSide"
-        label1="Substitute"
-        label2="A Side" // Combining label1 and label2 for display""
+        label1="Upgrade Fries or"
+        label2="Sub Side" // Combining label1 and label2 for display""
         style={{
           gridColumnStart: 2,
           gridRowStart: 4,
           backgroundColor: "Blue",
-          color: "white",
-        }}
-        onClick={handleSidePrompt}
-      />
-      <ButtonRegular
-        key="addside-prompt"
-        label1="Add A"
-        label2="Side" // Combining label1 and label2 for display""
-        style={{
-          gridColumnStart: 2,
-          gridRowStart: 5,
-          backgroundColor: "purple",
           color: "white",
         }}
         onClick={handleSidePrompt}

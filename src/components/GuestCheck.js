@@ -4,12 +4,12 @@ import guestCheck from "../images/guestCheck.bmp";
 function GuestCheck({ checkItems, total, selectedItemIndex, onItemSelected }) {
   const divStyle = {
     width: "100%", // Adjust the width as needed
-    height: "731px", // Adjust the height as needed
+    height: "650px", // Adjust the height as needed
     backgroundImage: `url(${guestCheck})`,
     //backgroundSize: "cover", // Cover the entire div
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "390px 790px", // Center the background image
+    backgroundSize: "349px 650px", // Center the background image
   };
 
   return (

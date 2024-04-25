@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import ConfirmationModal from "./ConfirmationModal";
 import snsSplash from "../images/POS-Splash.bmp";
 import passwordSplash from "../images/Password.bmp";
+import NumberButton from "./NumberButton";
 
 function Login({ onLoginSuccess }) {
   const [stage, setStage] = useState("username"); // 'username' or 'password'
@@ -72,6 +73,16 @@ function Login({ onLoginSuccess }) {
     
   };
 
+  const getImageName = (label) => {
+    if (label === "Clear") {
+      return "KeypadClear";
+    } else if (label === "Enter") {
+      return "KeypadEnter";
+    } else {
+      return `Keypad${label}`;
+    }
+  };
+
   const buttons = [
     "7",
     "8",
@@ -96,6 +107,15 @@ function Login({ onLoginSuccess }) {
         : () => handleNumberClick(label),
   }));
 
+  const keypadButtons = buttons.map((btn, index) => (
+    <NumberButton
+      key={btn.label}
+      label={btn.label}
+      action={btn.action}
+      buttonImage={getImageName(btn.label)}
+    />
+  ));
+
   return (
     <div className="login-container">
        
@@ -105,8 +125,8 @@ function Login({ onLoginSuccess }) {
         </div>
         <div className="keypad-container">
           <div className="login-input">{maskedInput}</div>
-          <div className="keypad">
-            {buttons.map((btn, index) => (
+          <div className="keypad">{keypadButtons}
+            {/* {buttons.map((btn, index) => (
               <button
                 key={index}
                 className={`keypad-button ${
@@ -120,9 +140,10 @@ function Login({ onLoginSuccess }) {
               >
                 {btn.label}
               </button>
-            ))}
+            ))} */}
           </div>
         </div>
+        
       </div>
       <div className="pos-footer">
       <div className="current-time">{currentTime}</div>

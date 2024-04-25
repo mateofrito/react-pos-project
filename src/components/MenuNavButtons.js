@@ -14,6 +14,7 @@ function MenuNavButtons({ setActiveMenu }) {
       <button className="menu-nav-button" onClick={() => setActiveMenu("Desserts")}>Desserts</button>
       <button className="menu-nav-button" onClick={() => setActiveMenu("KidsMenu")}>Kids Menu</button>
       <button className="menu-nav-button" onClick={() => setActiveMenu("DriveThruMenu")}>Combos</button>
+      <button className="menu-nav-button" onClick={() => setActiveMenu("GiftCard")}><p className="button-text">Gift Card/</p>Misc Menu</button>
     </div>
   );
 }

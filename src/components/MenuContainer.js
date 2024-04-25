@@ -6,7 +6,7 @@ import UpsellPrompts from "./UpsellPrompts";
 import ButtonRegular from "./ButtonRegular";
 import MainMenuShortcuts from "./MainMenuShortcuts";
 import DoneButton from "./DoneButton";
-import snsBackground from "../images/SnSMenuBack.bmp";
+import snsBackground from "../images/SnSMenuBack.bmp"; 
 
 function MenuContainer({
   setActiveMenu,
@@ -20,12 +20,12 @@ function MenuContainer({
 }) {
   const divStyle = {
     width: "100%", // Adjust the width as needed
-    height: "775px", // Adjust the height as needed
+    height: "645px", // Adjust the height as needed
     backgroundImage: `url(${snsBackground})`,
     //backgroundSize: "cover", // Cover the entire div
     backgroundPosition: 'center center', 
     backgroundRepeat: 'no-repeat',
-    backgroundSize: "716px 775px" // Center the background image
+    backgroundSize: "585px 620px" // Center the background image
   };
   const renderAlaCarteButton =
     activeMenu === "MainMenu" || activeMenu === "SteakburgerMenu" ? (
@@ -35,10 +35,20 @@ function MenuContainer({
       />
     ) : null;
 
-  const menuGridClassName =
-    activeMenu === "SandwichModifications"
-      ? "modifications-button-container"
-      : "menu-button-container";
+  // const menuGridClassName =
+  //   activeMenu === "SandwichModifications"
+  //     ? "modifications-button-container"
+  //     : "menu-button-container";
+
+  var menuGridClassName = "menu-button-container";
+
+  if(activeMenu === "SandwichModifications"){
+    menuGridClassName = "modifications-button-container"
+  } else if(activeMenu === "ShakeMenu"){
+    menuGridClassName = "menu-button-container four-per-row-container"
+  } else{
+    menuGridClassName = "menu-button-container"
+  }
 
   // Dynamically generate menu items based on the current menu
   const renderMenuItems = Object.entries(menuSettings.MenuItems)

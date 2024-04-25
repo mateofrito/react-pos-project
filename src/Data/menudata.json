@@ -10,7 +10,7 @@
         "kitchenDisplay":"Single Stk",
         "dressingTableDisplay":"Single Stk/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -25,14 +25,14 @@
       },
       "SingleChsFF": {
         "id": "2",
-        "label1":"Single Chs",
+        "label1":"Single Cheese",
         "label2":"w/FF",
         "price":"3.29",
         "checkDisplay":"Single Chs w/FF",
         "kitchenDisplay":"Single Chs",
         "dressingTableDisplay":"Single Chs/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -47,14 +47,14 @@
       },
       "SingleChsBacFF": {
         "id": "Stk-3",
-        "label1":"Single Chs &",
+        "label1":"Single Cheese &",
         "label2":"Bacon w/FF",
         "price":"3.99",
         "checkDisplay":"SINGLE CHS BAC w/FF",
         "kitchenDisplay":"SINGLE CHS BAC",
         "dressingTableDisplay":"SINGLE CHS BAC/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -76,7 +76,7 @@
         "kitchenDisplay":"DOUBLE STK",
         "dressingTableDisplay":"DOUBLE STK",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -108,7 +108,7 @@
         "isModifier": false,
 
         "Menus": {
-          "MainMenu": { "gridColumnStart": 3, "gridRowStart": 7 },
+          "MainMenu": { "gridColumnStart": 3, "gridRowStart": 8 },
           "SteakburgerMenu": { "gridColumnStart": 1, "gridRowStart": 7 }
         }
       },
@@ -122,7 +122,7 @@
         "kitchenDisplay":"DOUBLE CHS",
         "dressingTableDisplay":"DOUBLE CHS",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -145,7 +145,7 @@
         "kitchenDisplay":"DOUBLE CHSBCN",
         "dressingTableDisplay":"DOUBLE CHSBCN/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -168,7 +168,7 @@
         "kitchenDisplay":"TRIPLE STK",
         "dressingTableDisplay":"TRIPLE STK/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -191,7 +191,7 @@
         "kitchenDisplay":"TRIPLE CHS",
         "dressingTableDisplay":"TRIPLE CHS/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -214,7 +214,7 @@
         "kitchenDisplay":"FRISCO MELT",
         "dressingTableDisplay":"FRISCO MELT/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -236,7 +236,7 @@
         "kitchenDisplay":"STK FRANK",
         "dressingTableDisplay":"STK FRANK/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -258,7 +258,7 @@
         "kitchenDisplay":"FOOT LONG",
         "dressingTableDisplay":"FOOT LONG/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": true,
         "alaCarteDiscount": ".40",
@@ -273,14 +273,14 @@
       },
       "Chocolate Milkshake": {
         "id": "3",
-        "label1":"Chocolate",
-        "label2":"Milkshake",
+        "label1":"Regular",
+        "label2":"Chocolate",
         "price":"2.99",
         "checkDisplay":"Reg Choc Shk",
         "kitchenDisplay":"Reg Choc Shk",
         "dressingTableDisplay":"Reg Choc Shk",
         "modifications": "shakeToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -293,14 +293,14 @@
       },
       "Strawberry Milkshake": {
         "id": "4",
-        "label1":"Strawberry",
-        "label2":"Milkshake",
+        "label1":"Regular",
+        "label2":"Strawberry",
         "price":"2.99",
         "checkDisplay":"Reg Straw Shk",
         "kitchenDisplay":"Reg Straw Shk",
         "dressingTableDisplay":"Reg Choc Shk",
         "modifications": "shakeToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -313,14 +313,14 @@
       },
       "Vanilla Milkshake": {
         "id": "5",
-        "label1":"Vanilla",
-        "label2":"Milkshake",
+        "label1":"Regular",
+        "label2":"Vanilla",
         "price":"2.99",
         "checkDisplay":"Reg Van Shk",
         "kitchenDisplay":"Reg Van Shk",
         "dressingTableDisplay":"Reg Van Shk",
         "modifications": "shakeToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -329,6 +329,26 @@
         "Menus": {
           
           "ShakeMenu": { "gridColumnStart": 3, "gridRowStart": 1 }
+        }
+      },
+      "Orange Freeze": {
+        "id": "51",
+        "label1":"Regular",
+        "label2":"Orange Frz",
+        "price":"2.99",
+        "checkDisplay":"Reg Orange Frz",
+        "kitchenDisplay":"Reg Orange Frz",
+        "dressingTableDisplay":"Reg Orange Frz",
+        "modifications": "shakeToppings",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 1, "gridRowStart": 2 }
         }
       },
       "M&M Milkshake": {
@@ -340,7 +360,7 @@
         "kitchenDisplay":"RREG M&M SHK",
         "dressingTableDisplay":"REG M&M SHK",
         "modifications": "shakeToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -360,7 +380,7 @@
         "kitchenDisplay":"REG PBCUP SHK",
         "dressingTableDisplay":"REG PBCUP SHK",
         "modifications": "shakeToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -380,7 +400,7 @@
         "kitchenDisplay":"REG SNICKERS SHK",
         "dressingTableDisplay":"REG SNICKERS SHK",
         "modifications": "shakeToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -400,7 +420,7 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"Onion",
         "modifications": "",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": true,
 
@@ -418,12 +438,12 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"Tomato",
         "modifications": "",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": true,
 
         "Menus": {
-          "SandwichModifications": { "gridColumnStart": 2, "gridRowStart": 1 }
+          "SandwichModifications": { "gridColumnStart": 4, "gridRowStart": 1 }
           
         }
       },
@@ -436,7 +456,7 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"Lettuce",
         "modifications": "",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": true,
 
@@ -447,19 +467,19 @@
       },
       "Pickle": {
         "id": "9",
-        "label1":"Pickle",
+        "label1":"Pickles",
         "label2":"",
         "price":"",
-        "checkDisplay":"Pickle",
+        "checkDisplay":"Pickles",
         "kitchenDisplay":"",
-        "dressingTableDisplay":"Pickle",
+        "dressingTableDisplay":"Pickles",
         "modifications": "",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": true,
 
         "Menus": {
-          "SandwichModifications": { "gridColumnStart": 4, "gridRowStart": 1 }
+          "SandwichModifications": { "gridColumnStart": 2, "gridRowStart": 1 }
           
         }
       },
@@ -472,12 +492,12 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"Ketchup",
         "modifications": "",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": true,
 
         "Menus": {
-          "SandwichModifications": { "gridColumnStart": 5, "gridRowStart": 1 }
+          "SandwichModifications": { "gridColumnStart": 5, "gridRowStart": 2 }
           
         }
       },
@@ -490,12 +510,192 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"Mustard",
         "modifications": "",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "isModifier": true,
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 1, "gridRowStart": 2 }
+          
+        }
+      },
+      "HoneyMustard": {
+        "id": "11-HM",
+        "label1":"Honey Mustard",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Honey Mustard",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Honey Mustard",
+        "modifications": "",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "isModifier": true,
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 2, "gridRowStart": 2 }
+          
+        }
+      },
+      "Mayo": {
+        "id": "15",
+        "label1":"Mayo",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"MAYO",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"MAYO",
+        "modifications": "",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "isModifier": true,
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 5, "gridRowStart": 1 }
+          
+        }
+      },
+      "BBQ": {
+        "id": "16",
+        "label1":"BBQ",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"BBQ",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"BBQ",
+        "modifications": "",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": true,
 
         "Menus": {
           "SandwichModifications": { "gridColumnStart": 6, "gridRowStart": 1 }
+          
+        }
+      },
+      "StubbsBBQ": {
+        "id": "16-Sbbq",
+        "label1":" Stubbs BBQ",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Stubbs BBQ",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Stubbs BBQ",
+        "modifications": "",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "isModifier": true,
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 6, "gridRowStart": 2}
+          
+        }
+      },
+      "Icebrg": {
+        "id": "Icebrg",
+        "label1":"Icebrg Lettuce",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Icebrg Lettuce",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Icebrg Lettuce",
+        "modifications": "",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "isModifier": true,
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 4, "gridRowStart": 2}
+          
+        }
+      },
+      "GarlicMayo": {
+        "id": "GarlicMayo",
+        "label1":"Garlic Mayo",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Garlic Mayo",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Garlic Mayo",
+        "modifications": "",
+        "buttonColor":"Yellow",
+        "textColor":"Black",
+        "isModifier": true,
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 1, "gridRowStart": 3}
+          
+        }
+      },
+      "ChipMayo": {
+        "id": "ChipMayo",
+        "label1":"Chip Mayo",
+        "label2":"",
+        "price":"",
+        "checkDisplay":"Chip Mayo",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Chip Mayo",
+        "modifications": "",
+        "buttonColor":"Yellow",
+        "textColor":"Black",
+        "isModifier": true,
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 2, "gridRowStart": 3}
+          
+        }
+      },
+      "BaconAdd": {
+        "id": "BaconAdd",
+        "label1":"Add",
+        "label2":"Bacon",
+        "price":"1.25",
+        "checkDisplay":"Add Bacon",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Add Bacon",
+        "modifications": "",
+        "buttonColor":"Yellow",
+        "textColor":"Black",
+        "isModifier": true,
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 3, "gridRowStart": 3}
+          
+        }
+      },
+      "BaconPrime": {
+        "id": "BaconPrime",
+        "label1":"Bacon",
+        "label2":"Prime",
+        "price":"1.99",
+        "checkDisplay":"Add Prime Bacon",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Add Prime Bacon",
+        "modifications": "",
+        "buttonColor":"Teal",
+        "textColor":"White",
+        "isModifier": true,
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 4, "gridRowStart": 3}
+          
+        }
+      },
+      "ClassicDress": {
+        "id": "LTOP",
+        "label1":"Classic",
+        "label2":"Dress",
+        "price":"",
+        "checkDisplay":"Classic Dress",
+        "kitchenDisplay":"",
+        "dressingTableDisplay":"Classic Dress",
+        "modifications": "",
+        "buttonColor":"Green",
+        "textColor":"White",
+        "isModifier": true,
+
+        "Menus": {
+          "SandwichModifications": { "gridColumnStart": 6, "gridRowStart": 3}
           
         }
       },
@@ -508,7 +708,7 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"SIDE SALAD",
         "modifications": "saladModifications",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": false,
 
@@ -526,7 +726,7 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"SIDE SALAD",
         "modifications": "saladModifications",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": false,
         "isSideAddition": true,
@@ -545,7 +745,7 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"ONION RINGS",
         "modifications": "",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": false,
 
@@ -563,7 +763,7 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"ONION RINGS",
         "modifications": "",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": false,
         "isSideAddition": true,
@@ -582,7 +782,7 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"COTTAGE CHEESE",
         "modifications": "",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "isModifier": false,
 
@@ -600,7 +800,7 @@
         "kitchenDisplay":"#1 Double Cheese",
         "dressingTableDisplay":"combo #1 Dbl Chs/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -621,7 +821,7 @@
         "kitchenDisplay":"#2 Single Cheese",
         "dressingTableDisplay":"#2 Single Chs/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -641,7 +841,7 @@
         "kitchenDisplay":"#3 Frisco Melt",
         "dressingTableDisplay":"#3 Frisco Melt/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -661,7 +861,7 @@
         "kitchenDisplay":"#4 Bacon Chs Dbl",
         "dressingTableDisplay":"#4 Bacon Chs Dbl/FF",
         "modifications": "dtToppings",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -681,7 +881,7 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"",
         "modifications": "drinkMods",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,
@@ -701,7 +901,7 @@
         "kitchenDisplay":"",
         "dressingTableDisplay":"",
         "modifications": "drinkMods",
-        "buttonColor":"red",
+        "buttonColor":"#9f0000",
         "textColor":"white",
         "alaCarteEligible": false,
         "addASide": false,

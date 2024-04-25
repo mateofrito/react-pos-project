@@ -1,9 +1,14 @@
 import React from "react";
 
 function ButtonRegular({ label1, label2, style, onClick, activeMenu }) {
+  var buttonClassName ="pos-button";
     if (activeMenu === "SandwichModifications") {
-      var buttonClassName = "pos-modifications-button";
-    } else {
+      buttonClassName = "pos-modifications-button";
+    } else if(activeMenu === "ShakeMenu"){
+      buttonClassName ="pos-button four-per-row";
+    }
+    else 
+    {
       buttonClassName = "pos-button";
     }
     return (

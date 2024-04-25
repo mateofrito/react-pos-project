@@ -31,17 +31,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     "DOSWin" monospace;
 }
-
+.pos-background{
+  margin-top: 0px;
+  padding-top: 0px;
+}
 .pos-button {
-  background-color: red; /* Light grey background */
+  background-color: #9f0000; /* Light grey background */
   color: white; /* Text color */
   border-top: 2px solid #ffffff; /* Top and left borders are lighter, creating a raised effect */
   border-left: 2px solid #ffffff;
   border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
   border-right: 2px solid #808080;
   padding: 5px 15px; /* Padding around the text */
-  font-family: "Tahoma" !important;
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
   font-weight: bold;
+  letter-spacing: -.25px;
   /*Font similar to Windows 95 */
   font-size: 16px; /* Font size */
   cursor: pointer; /* Cursor to pointer to indicate it's clickable */
@@ -51,11 +55,20 @@ code {
   flex-direction: column; /* Stacks content vertically */
   align-items: center;
   text-align: center;
-  height: 80px;
-  width: 200px;
+  height: 60px;
+  width: 175px;
   /* text-shadow: 0.5px 0px white, 1.5px 0px white;
   color: transparent;
   letter-spacing: 1px; */
+}
+
+.four-per-row{
+width: 120px;
+}
+
+.four-per-row-container{
+  grid-template-columns: repeat(4, 120px) !important;
+
 }
 
 .pos-button:active {
@@ -68,15 +81,16 @@ code {
 }
 
 .pos-button-wide {
-  background-color: goldenrod; /* Light grey background */
+  background-color: #9f9f00; /* Light grey background */
   color: white; /* Text color */
   border-top: 2px solid #ffffff; /* Top and left borders are lighter, creating a raised effect */
   border-left: 2px solid #ffffff;
   border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
   border-right: 2px solid #808080;
   padding: 5px 15px; /* Padding around the text */
-  font-family: "Tahoma" !important;
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
   font-weight: bold;
+  letter-spacing: -.25px;
   /*Font similar to Windows 95 */
   font-size: 16px; /* Font size */
   cursor: pointer; /* Cursor to pointer to indicate it's clickable */
@@ -84,8 +98,8 @@ code {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
-  width: 600px;
+  height: 60px;
+  width: 525px;
   grid-column: span 3;
 }
 
@@ -110,8 +124,9 @@ code {
   border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
   border-right: 2px solid #808080;
   padding: 5px 15px; /* Padding around the text */
-  font-family: "Tahoma" !important;
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
   font-weight: bold;
+  letter-spacing: -.25px;
   /*Font similar to Windows 95 */
   font-size: 16px; /* Font size */
   cursor: pointer; /* Cursor to pointer to indicate it's clickable */
@@ -121,8 +136,8 @@ code {
   flex-direction: column; /* Stacks content vertically */
   align-items: center;
   text-align: center;
-  height: 80px;
-  width: 120px;
+  height: 45px;
+  width: 75px;
   /* text-shadow: 0.5px 0px white, 1.5px 0px white;
   color: transparent;
   letter-spacing: 1px; */
@@ -137,11 +152,13 @@ code {
   padding-bottom: 4px;
 }
 .menu-container {
+  max-width: 585px;
   background-color: black;
   color: white;
   justify-content: center;
   text-align: center;
-  width:100%
+  width:100%;
+  max-height: 660px;
 }
 
 .menu-interface-container{
@@ -151,8 +168,8 @@ code {
 
 .menu-button-container {
   display: grid;
-  grid-template-columns: repeat(3, 200px); /* 3 columns, each 240px wide */
-  grid-auto-rows: 80px; /* Minimum height for rows, but allows expansion */
+  grid-template-columns: repeat(3, 175px); /* 3 columns, each 240px wide */
+  grid-auto-rows: 60px; /* Minimum height for rows, but allows expansion */
   justify-content: center;
   align-content: start; /* Align to the top if container is taller than content */
   gap: 0; /* No space between buttons */
@@ -163,19 +180,20 @@ code {
 
 .modifications-button-container {
   display: grid;
-  grid-template-columns: repeat(6, 120px); /* 6 columns, each 120px wide */
-  grid-auto-rows: 80px; /* Minimum height for rows, but allows expansion */
+  grid-template-columns: repeat(6, 75px); /* 6 columns, each 120px wide */
+  grid-auto-rows: 45px; /* Minimum height for rows, but allows expansion */
   justify-content: center;
   align-content: start; /* Align to the top if container is taller than content */
   gap: 0; /* No space between buttons */
   width: 100%; /* Adjust based on your preference */
   min-height: 800px; /* Adjust based on your preference */
-  background-color: black;
+  
 }
 
 .menu-title {
-  font-family: "Tahoma" !important;
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
   font-weight: bold;
+  letter-spacing: -.25px;
 }
 
 .menu-nav-button {
@@ -185,9 +203,10 @@ code {
   border-left: 2px solid #ffffff;
   border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
   border-right: 2px solid #808080;
-  padding: 5px 15px; /* Padding around the text */
-  font-family: "Tahoma" !important;
+  /* padding: 5px 15px; Padding around the text */
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
   font-weight: bold;
+  letter-spacing: -.25px;
   /*Font similar to Windows 95 */
   font-size: 16px; /* Font size */
   cursor: pointer; /* Cursor to pointer to indicate it's clickable */
@@ -197,8 +216,8 @@ code {
   flex-direction: column; /* Stacks content vertically */
   align-items: center;
   text-align: center;
-  height: 60px;
-  width: 120px;
+  height: 50px;
+  width: 100px;
   /* text-shadow: 0.5px 0px white, 1.5px 0px white;
   color: transparent;
   letter-spacing: 1px; */
@@ -216,15 +235,22 @@ code {
 .app-container {
   display: flex;
   flex-direction: column;
-  max-width: 1300px; 
+  max-width: 1125px; 
+  min-width: 1125px;
   background-color: lightgrey; /* Stack children vertically */
+}
+
+.button-text{
+  padding: 0px;
+  margin: 0px;
 }
 
 .main-content {
   display: flex;
   flex-direction: row; /* Lay out children horizontally */
   align-items: flex-start;
-  max-height: 800px;
+  max-height: 675px;
+  max-width: 1100px;
   /* Align children at the start of the flex container */
 }
 
@@ -242,8 +268,8 @@ code {
   display: flex;
   background-color: lightgrey;
   flex-direction: column;
-  max-height: 800px;
-  min-height: 800px; /* Stacks the buttons vertically */
+  max-height: 650px;
+  min-height: 650px; /* Stacks the buttons vertically */
   /* Adds some space between the menu container and the buttons */
 }
 
@@ -258,7 +284,7 @@ code {
   font-weight: bold;
   flex-direction: column;
   background-color: lightskyblue; /* Light background for the guest check */
-  width: 400px;
+  width: 350px;
   height: 100%;
   padding: 0px;
   border-top: 5px solid lightgrey;
@@ -266,25 +292,25 @@ code {
   border-right: 5px solid lightgrey;
   border-left: 5px solid lightgrey;
   box-sizing: border-box;
-  min-height: 800px; /* Includes padding in the element's total width and height */
+  min-height: 650px; /* Includes padding in the element's total width and height */
 }
 
 .check-contents {
   flex-grow: 1;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden; /* Allows scrolling if items exceed panel height */
 }
 
 .order-contents {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 650px;
+  height: 535px;
 }
 
 .check-header{
   /* background-color: white; */
   text-align: center;
-  height: 78px;
+  height: 64px;
 }
 
 .order-type-text{
@@ -295,14 +321,15 @@ code {
   grid-template-columns: 1fr 5fr 3fr; /* Adjust based on your preference */
   gap: 10px;
   padding: 0px 0;
-  width: 390px;
-  height:26px;
+  width: 350px;
+  height:21px;
+  font-size: 16px;
 }
 
 .check-item-text{
   color: blue;
   padding-left: 15px;
-  padding-top: 2px;
+  padding-top: 0px;
 }
 
 .check-total-text{
@@ -311,7 +338,7 @@ code {
 
 .check-total-amount{
   font-size: 35px; 
-  padding-right:20px;
+  padding-right:10px;
 }
 
 .modification{
@@ -334,7 +361,7 @@ code {
 }
 .check-total {
   padding-top: 10px;
-  padding-left: 125px;
+  padding-left: 75px;
    /* Adds a line above the total for separation */
   text-align: right;
   font-weight: bold;
@@ -369,8 +396,9 @@ code {
   border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
   border-right: 2px solid #808080;
   padding: 5px 15px; /* Padding around the text */
-  font-family: "Tahoma" !important;
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
   font-weight: bold;
+  letter-spacing: -.25px;
   /*Font similar to Windows 95 */
   font-size: 16px; /* Font size */ /* Adds space between buttons */
   /* Add more button styling as needed */
@@ -400,7 +428,7 @@ code {
   /* Style for the action buttons row */
   display: flex;
   background-color: lightgrey;
-  justify-content: right; /* Center buttons horizontally */
+  justify-content: left; /* Center buttons horizontally */
   gap: 0px; /* Space between buttons */
   margin-bottom: 0px; /* Space between the button row and the rest of the content */
 }
@@ -419,8 +447,9 @@ code {
   border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
   border-right: 2px solid #808080;
   padding: 5px 15px; /* Padding around the text */
-  font-family: "Tahoma" !important;
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
   font-weight: bold;
+  letter-spacing: -.25px;
   /*Font similar to Windows 95 */
   font-size: 16px; /* Font size */
   cursor: pointer; /* Cursor to pointer to indicate it's clickable */
@@ -430,8 +459,8 @@ code {
   flex-direction: column; /* Stacks content vertically */
   align-items: center;
   text-align: center;
-  height: 60px;
-  width: 120px;
+  height: 50px;
+  width: 100px;
   /* text-shadow: 0.5px 0px white, 1.5px 0px white;
   color: transparent;
   letter-spacing: 1px; */
@@ -454,8 +483,9 @@ code {
   border-bottom: 2px solid #808080; /* Bottom and right borders are darker, enhancing the 3D effect */
   border-right: 2px solid #808080;
   padding: 5px 15px; /* Padding around the text */
-  font-family: "Tahoma" !important;
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
   font-weight: bold;
+  letter-spacing: -.25px;
   /*Font similar to Windows 95 */
   font-size: 16px; /* Font size */
   cursor: pointer; /* Cursor to pointer to indicate it's clickable */
@@ -465,8 +495,8 @@ code {
   flex-direction: column; /* Stacks content vertically */
   align-items: center;
   text-align: center;
-  height: 60px;
-  width: 120px;
+  height: 50px;
+  width: 100px;
   /* text-shadow: 0.5px 0px white, 1.5px 0px white;
   color: transparent;
   letter-spacing: 1px; */
@@ -505,7 +535,9 @@ code {
 
 .login-input {
   font-size: 16px;
-  font-family: "Tahoma" !important;
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
+  font-weight: bold;
+  letter-spacing: -.25px;
   color: darkblue;
   font-weight: bold;
   margin-bottom: 20px;
@@ -531,7 +563,9 @@ code {
   background-color: white;
   width: 100%;
   height: 24px;
-  font-family: "Tahoma" !important;
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
+  font-weight: bold;
+  letter-spacing: -.25px;
   color: darkblue;
   text-align: center;
   font-weight: bold;
@@ -548,7 +582,9 @@ code {
   background-color: white;
   width: 100%;
   height: 24px;
-  font-family: "Tahoma" !important;
+  font-family: Arial, Helvetica, sans-serif, sans-serif !important;
+  font-weight: bold;
+  letter-spacing: -.25px; 
   color: darkblue;
   text-align: center;
   font-weight: bold;
@@ -558,7 +594,7 @@ code {
 .keypad-container{
   background-color: darkred;
   max-width: 450px;
-  height: 375px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -600,6 +636,20 @@ code {
   height: 80px;
   width: 140px;
   /* Additional button styling as needed */
+}
+
+.iris-keypad-button{
+  width: 140px;
+  height: 90px;
+  border: none;
+  cursor: pointer;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; /* Adjust as necessary */
+  color: white; /* Adjust as necessary */
+  /* Add any other styles such as margins between buttons */
 }
 
 .keypad-button:active {
@@ -657,7 +707,7 @@ code {
 }
 
 .pos-container{
-  min-height: 900px;
+  min-height: 72 0px;
 }
 
 .modal-backdrop {

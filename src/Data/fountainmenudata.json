@@ -1,0 +1,147 @@
+{
+    "AppliedMenus": ["MainMenu", "DriveThruMenu", "ShakeMenu","SteakburgerMenu","SpecialitiesMenu","ChiliMenu","SidesMenu","SandwichModifications"],
+    "MenuItems": {
+      
+      "Chocolate Milkshake": {
+        "id": "3",
+        "label1":"Regular",
+        "label2":"Chocolate",
+        "price":"2.99",
+        "checkDisplay":"Reg Choc Shk",
+        "kitchenDisplay":"Reg Choc Shk",
+        "dressingTableDisplay":"Reg Choc Shk",
+        "modifications": "shakeToppings",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 1, "gridRowStart": 1 }
+        }
+      },
+      "Strawberry Milkshake": {
+        "id": "4",
+        "label1":"Regular",
+        "label2":"Strawberry",
+        "price":"2.99",
+        "checkDisplay":"Reg Straw Shk",
+        "kitchenDisplay":"Reg Straw Shk",
+        "dressingTableDisplay":"Reg Choc Shk",
+        "modifications": "shakeToppings",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 2, "gridRowStart": 1 }
+        }
+      },
+      "Vanilla Milkshake": {
+        "id": "5",
+        "label1":"Regular",
+        "label2":"Vanilla",
+        "price":"2.99",
+        "checkDisplay":"Reg Van Shk",
+        "kitchenDisplay":"Reg Van Shk",
+        "dressingTableDisplay":"Reg Van Shk",
+        "modifications": "shakeToppings",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 3, "gridRowStart": 1 }
+        }
+      },
+      "Orange Freeze": {
+        "id": "51",
+        "label1":"Regular",
+        "label2":"Orange Frz",
+        "price":"2.99",
+        "checkDisplay":"Reg Orange Frz",
+        "kitchenDisplay":"Reg Orange Frz",
+        "dressingTableDisplay":"Reg Orange Frz",
+        "modifications": "shakeToppings",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 1, "gridRowStart": 2 }
+        }
+      },
+      "M&M Milkshake": {
+        "id": "Shake4",
+        "label1":"M&M",
+        "label2":"Milkshake",
+        "price":"3.29",
+        "checkDisplay":"REG M&M SHK",
+        "kitchenDisplay":"RREG M&M SHK",
+        "dressingTableDisplay":"REG M&M SHK",
+        "modifications": "shakeToppings",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 1, "gridRowStart": 4 }
+        }
+      },
+      "PbCupMilkshake": {
+        "id": "Shake5",
+        "label1":"PB Cup",
+        "label2":"Milkshake",
+        "price":"3.29",
+        "checkDisplay":"REG PBCUP SHK",
+        "kitchenDisplay":"REG PBCUP SHK",
+        "dressingTableDisplay":"REG PBCUP SHK",
+        "modifications": "shakeToppings",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 2, "gridRowStart": 4 }
+        }
+      },
+      "SnickersMilkshake": {
+        "id": "Shake6",
+        "label1":"Snickers",
+        "label2":"Milkshake",
+        "price":"3.29",
+        "checkDisplay":"REG SNICKERS SHK",
+        "kitchenDisplay":"REG SNICKERS SHK",
+        "dressingTableDisplay":"REG SNICKERS SHK",
+        "modifications": "shakeToppings",
+        "buttonColor":"#9f0000",
+        "textColor":"white",
+        "alaCarteEligible": false,
+        "addASide": false,
+        "isModifier": false,
+
+        "Menus": {
+          
+          "ShakeMenu": { "gridColumnStart": 3, "gridRowStart": 4 }
+        }
+      }
+     
+    }
+  }

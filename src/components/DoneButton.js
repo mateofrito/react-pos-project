@@ -6,9 +6,9 @@ const getStyle = (activeMenu) => {
       case "SandwichModifications":
         return {
           gridColumnStart: 5,
-          gridRowStart: 6,
-          backgroundColor: "purple",
-          color: "white",
+          gridRowStart: 11,
+          backgroundColor: "red",
+          color: "yellow",
         };
       case "AddSidesMenu":
         return {

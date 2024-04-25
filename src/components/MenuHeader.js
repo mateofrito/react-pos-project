@@ -4,14 +4,14 @@ function MenuHeader({ activeMenu }) {
     const menuHeaders = {
       MainMenu: "Main Menu",
       DriveThruMenu: "Specials/Promo Menu",
-      ShakeMenu: "Shake Menu",
+      ShakeMenu: "The Fountain",
       SteakburgerMenu: "Steakburgers",
       ChiliMenu: "Chili Menu",
       SidesMenu: "Sides",
       SandwichModifications: "Toppings/Modifications",
       Steakfranks: "Franks and Footlongs",
       AddASidesMenu: "Sides",
-      SidePrompt: "Add or Substitue a Side",
+      SidePrompt: "Press Done for fries or if they would like a different side press Substitute",
       default: "", // Default case
     };
     const headerValue = menuHeaders[activeMenu] || menuHeaders.default;
